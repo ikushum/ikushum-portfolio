@@ -1,5 +1,5 @@
 <template>
-  <div style="width:100%" class="d-flex">
+  <v-container style="width:100%" class="d-flex">
     <v-img contain max-width="100" src="/logo.svg" />
 
     <v-spacer />
@@ -13,7 +13,7 @@
     >
       <v-icon>mdi-menu</v-icon>
     </v-btn> -->
-  </div>
+  </v-container>
 </template>
 
 <script>

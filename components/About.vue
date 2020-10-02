@@ -1,5 +1,5 @@
 <template>
-  <v-container class="circle-bg min-full-vh d-flex align-center text-center">
+  <v-container class="circle-bg min-full-vh d-flex align-center">
     <v-row>
       <v-col class="d-none d-lg-block" cols="12" lg="6">
         <v-img contain src="/ishan.png" />
