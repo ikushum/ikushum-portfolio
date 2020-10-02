@@ -19,7 +19,7 @@
         </h3>
       </div>
 
-      <v-btn large color="primary" depressed rounded>
+      <v-btn large color="primary" depressed>
         About Me
       </v-btn>
     </v-container>

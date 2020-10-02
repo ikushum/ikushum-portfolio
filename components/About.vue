@@ -26,6 +26,10 @@
           I've helped my clients build amazing web apps and watch them grow bigger and perform amazingly well
           in the market
         </p>
+
+        <v-btn large color="primary" depressed class="my-5">
+          See my Works
+        </v-btn>
       </v-col>
     </v-row>
   </v-container>
