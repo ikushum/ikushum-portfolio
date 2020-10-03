@@ -2,7 +2,7 @@
   <v-container class="min-full-vh d-flex align-center">
     <div style="width:100%">
       <h2 class="display-2">
-        Testomonials
+        Clients Love My Work
       </h2>
 
       <v-carousel
