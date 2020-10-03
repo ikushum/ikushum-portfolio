@@ -4,7 +4,13 @@
 
     <v-spacer />
 
-    <v-btn v-for="menuItem in menuItems" :key="menuItem.text" text class="text-capitalize mx-2">
+    <v-btn
+      v-for="menuItem in menuItems"
+      :key="menuItem.text"
+      text
+      class="text-capitalize mx-2"
+      @click="$vuetify.goTo(menuItem.goto)"
+    >
       {{ menuItem.text }}
     </v-btn>
 
@@ -21,12 +27,13 @@ export default {
   data () {
     return {
       menuItems: [
-        { text: 'Home' },
-        { text: 'About Me' },
-        { text: 'Works' },
-        { text: 'Expertise' },
-        { text: 'Journal' },
-        { text: 'Contact' }
+        { text: 'Home', goto: '#home' },
+        { text: 'About Me', goto: '#about' },
+        { text: 'Works', goto: '#works' },
+        { text: 'Expertise', goto: '#expertise' },
+        { text: 'Testomonials', goto: '#testomonials' }
+        // { text: 'Journal', goto: '#home' },
+        // { text: 'Contact', goto: '#home' }
       ]
     }
   }

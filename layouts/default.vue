@@ -90,12 +90,13 @@ export default {
       title: 'ikushum',
 
       menuItems: [
-        { text: 'Home' },
-        { text: 'About Me' },
-        { text: 'Works' },
-        { text: 'Expertise' },
-        { text: 'Journal' },
-        { text: 'Contact' }
+        { text: 'Home', goto: '#home' },
+        { text: 'About Me', goto: '#home' },
+        { text: 'Works', goto: '#works' },
+        { text: 'Expertise', goto: '#expertise' },
+        { text: 'Testomonials', goto: '#testomonials' }
+        // { text: 'Journal', goto: '#home' },
+        // { text: 'Contact', goto: '#home' }
       ]
     }
   }

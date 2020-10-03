@@ -1,12 +1,12 @@
 <template>
   <div>
-    <app-header style="margin-top:-90px" />
+    <app-header id="home" style="margin-top:-90px" />
 
     <div class="px-sm-10 px-5">
-      <about />
-      <my-works />
-      <my-expertise />
-      <testomonials />
+      <about id="about" />
+      <my-works id="works" />
+      <my-expertise id="expertise" />
+      <testomonials id="testomonials" />
     </div>
   </div>
 </template>

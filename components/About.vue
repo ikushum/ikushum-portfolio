@@ -32,7 +32,13 @@
           in the market
         </p>
 
-        <v-btn large color="primary" depressed class="my-5">
+        <v-btn
+          large
+          color="primary"
+          depressed
+          class="my-5"
+          @click="$vuetify.goTo('#works')"
+        >
           See my Works
         </v-btn>
       </v-col>

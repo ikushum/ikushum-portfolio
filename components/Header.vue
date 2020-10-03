@@ -19,7 +19,12 @@
         </h3>
       </div>
 
-      <v-btn large color="primary" depressed>
+      <v-btn
+        large
+        color="primary"
+        depressed
+        @click="$vuetify.goTo('#about')"
+      >
         About Me
       </v-btn>
     </v-container>
