@@ -1,7 +1,7 @@
 <template>
   <v-container class="circle-bg min-full-vh d-flex align-center">
     <div style="width:100%">
-      <h2 class="display-2">
+      <h2 class="display-2 my-12">
         My Works
       </h2>
 

@@ -1,33 +1,68 @@
 <template>
   <v-container class="min-full-vh d-flex align-center">
     <div style="width:100%">
-      <h2 class="display-2 my-12">
-        My Expertise
+      <h2 class="display-2">
+        Testomonials
       </h2>
 
-      <v-row class="my-5">
-        <v-col
-          v-for="expertise in expertises"
-          :key="expertise.title"
-          xs="12"
-          sm="6"
-          md="6"
+      <v-carousel
+        :show-arrows="false"
+        color="primary"
+        light
+        cycle
+        hide-delimiter-background
+      >
+        <v-carousel-item
+          v-for="testomonial in testomonials"
+          :key="testomonial.title"
         >
-          <v-list-item class="px-0">
-            <v-list-item-content>
-              <v-list-item-title class="display-1 d-flex align-center">
-                <v-avatar tile class="mx-4">
-                  <v-img contain :src="expertise.image" />
-                </v-avatar>
-                <div class="circle-bg py-5 pr-5" v-text="expertise.title" />
-              </v-list-item-title>
-              <div class="grey--text px-2 pa-2 line-height">
-                Writing result-oriented ad copy is difficult, as it must appeal to, entice, and convince consumers to take action. There is no magic formula to write perfect ad copy it is based on a number of factors, including ad placement,
-              </div>
-            </v-list-item-content>
-          </v-list-item>
-        </v-col>
-      </v-row>
+          <v-sheet
+            tile
+            color="white"
+            :class="{'fill-height': $vuetify.breakpoint.mdAndUp}"
+          >
+            <v-row
+              align="center"
+              justify="center"
+              class="fill-height black--text circle-bg"
+            >
+              <v-col
+                xs="12"
+                sm="12"
+                md="6"
+              >
+                <v-list color="transparent">
+                  <v-list-item>
+                    <v-list-item-avatar size="100">
+                      <v-img src="https://cdn.vuetifyjs.com/images/john.png" />
+                    </v-list-item-avatar>
+
+                    <v-list-item-content>
+                      <v-list-item-title class="headline">
+                        John Leider
+                      </v-list-item-title>
+                      <v-list-item-title class="mt-2">
+                        Founder, Vuetify
+                      </v-list-item-title>
+                      <v-list-item-subtitle>john@vuetifyjs.com</v-list-item-subtitle>
+                    </v-list-item-content>
+                  </v-list-item>
+                </v-list>
+              </v-col>
+
+              <v-col
+                xs="12"
+                sm="12"
+                md="6"
+              >
+                <div class="body-1 py-10 grey--text text--darken-2">
+                  “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rutrum, tellus sed imperdiet sodales, dui diam accumsan lorem, a accumsan ex leo nec tellus. Phasellus varius dui neque, efficitur rutrum tellus luctus a. Pellentesque tincidunt convallis justo a tincidunt. Cras finibus tempor tellus sit amet congue.
+                </div>
+              </v-col>
+            </v-row>
+          </v-sheet>
+        </v-carousel-item>
+      </v-carousel>
     </div>
   </v-container>
 </template>
@@ -36,7 +71,7 @@
 export default {
   data () {
     return {
-      expertises: [
+      testomonials: [
         { title: 'Vue', description: 'A short description', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1184px-Vue.js_Logo_2.svg.png' },
         { title: 'Nuxt', description: 'A short description', image: 'data:image/png;base64,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' },
         { title: 'Vuetify', description: 'A short description', image: 'https://seeklogo.com/images/V/vuetify-logo-3BCF73C928-seeklogo.com.png' },
@@ -51,8 +86,8 @@ export default {
 
 <style scoped>
   .circle-bg {
-    background-size: contain;
-    background-position: right;
+    background-size: 40%;
+    background-position: center right;
     background-image: url('/circle.svg');
   }
 

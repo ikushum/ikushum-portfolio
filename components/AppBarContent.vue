@@ -24,7 +24,7 @@ export default {
         { text: 'Home' },
         { text: 'About Me' },
         { text: 'Works' },
-        { text: 'Expertie' },
+        { text: 'Expertise' },
         { text: 'Journal' },
         { text: 'Contact' }
       ]
