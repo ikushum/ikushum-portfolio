@@ -9,7 +9,7 @@
 <script>
 import AppHeader from '@/components/Header'
 import About from '@/components/About'
-import MyWorks from '@/components/MyWorks'
+import MyWorks from '@/components/MyWorks/Index'
 export default {
   components: { AppHeader, About, MyWorks }
 }
