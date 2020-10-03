@@ -4,21 +4,25 @@
 
     <v-spacer />
 
-    <v-btn
-      v-for="menuItem in menuItems"
-      :key="menuItem.text"
-      text
-      class="text-capitalize mx-2"
-      @click="$vuetify.goTo(menuItem.goto)"
-    >
-      {{ menuItem.text }}
-    </v-btn>
+    <template v-if="$vuetify.breakpoint.mdAndUp">
+      <v-btn
+        v-for="menuItem in menuItems"
+        :key="menuItem.text"
+        text
+        class="text-capitalize mx-2"
+        @click="$vuetify.goTo(menuItem.goto)"
+      >
+        {{ menuItem.text }}
+      </v-btn>
+    </template>
 
-    <!-- <v-btn
+    <v-btn
+      v-else
       icon
+      @click="$emit('show-nav-drawer')"
     >
       <v-icon>mdi-menu</v-icon>
-    </v-btn> -->
+    </v-btn>
   </v-container>
 </template>
 

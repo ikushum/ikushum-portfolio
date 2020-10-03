@@ -9,7 +9,7 @@
       height="90px"
       color="transparent"
     >
-      <app-bar-content />
+      <app-bar-content @show-nav-drawer="isDrawerOpen = true" />
     </v-app-bar>
 
     <v-app-bar
@@ -20,8 +20,39 @@
       class="px-12"
       scroll-threshold="65"
     >
-      <app-bar-content />
+      <app-bar-content @show-nav-drawer="isDrawerOpen = true" />
     </v-app-bar>
+
+    <v-navigation-drawer
+      v-model="isDrawerOpen"
+      fixed
+      dark
+      width="80%"
+      color="#212427"
+    >
+      <v-list class="py-0">
+        <v-list-item class="py-1">
+          <v-list-item-content>
+            <v-img contain max-width="100" src="/logo.svg" />
+          </v-list-item-content>
+        </v-list-item>
+
+        <v-divider />
+
+        <v-list-item
+          v-for="menuItem in menuItems"
+          :key="menuItem.text"
+          link
+          class="text-capitalize mx-2 text-left"
+
+          @click="$vuetify.goTo(menuItem.goto), isDrawerOpen = false"
+        >
+          <v-list-item-content>
+            {{ menuItem.text }}
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
 
     <v-main>
       <v-container style="max-width:2300px" class="pa-0">
@@ -88,7 +119,7 @@ export default {
   data () {
     return {
       title: 'ikushum',
-
+      isDrawerOpen: false,
       menuItems: [
         { text: 'Home', goto: '#home' },
         { text: 'About Me', goto: '#home' },
