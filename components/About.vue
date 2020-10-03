@@ -52,4 +52,8 @@
     background-position: center;
     background-image: url('/circle.svg');
   }
+  .display-2{
+    font-weight: bold;
+    font-family: 'Playfair Display', serif !important;
+  }
 </style>

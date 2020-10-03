@@ -67,8 +67,8 @@ export default {
     background-position: center right;
     background-image: url('/circle.svg');
   }
-
-  .line-height {
-    line-height: 25px;
+  .display-2{
+    font-weight: bold;
+    font-family: 'Playfair Display', serif !important;
   }
 </style>

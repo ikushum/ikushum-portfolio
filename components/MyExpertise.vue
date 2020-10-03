@@ -21,7 +21,7 @@
                 </v-avatar>
                 <div class="circle-bg py-5 pr-5" v-text="expertise.title" />
               </v-list-item-title>
-              <div class="grey--text px-2 pa-2 line-height">
+              <div class="grey--text px-2 pa-2 line-height-25">
                 Writing result-oriented ad copy is difficult, as it must appeal to, entice, and convince consumers to take action. There is no magic formula to write perfect ad copy it is based on a number of factors, including ad placement,
               </div>
             </v-list-item-content>
@@ -55,8 +55,11 @@ export default {
     background-position: right;
     background-image: url('/circle.svg');
   }
-
-  .line-height {
+  .line-height-25 {
     line-height: 25px;
+  }
+  .display-2{
+    font-weight: bold;
+    font-family: 'Playfair Display', serif !important;
   }
 </style>

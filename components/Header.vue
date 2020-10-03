@@ -30,3 +30,10 @@
     </v-container>
   </v-img>
 </template>
+
+<style scoped>
+.display-2{
+  font-family: 'Playfair Display', serif !important;
+  font-weight: bold;
+}
+</style>
