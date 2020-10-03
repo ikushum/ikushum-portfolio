@@ -6,42 +6,37 @@
       </h2>
 
       <v-row v-if="$vuetify.breakpoint.lgAndUp" class="my-5">
-        <v-col cols="4">
-          <my-work :work="works[0]" height="100%" />
-        </v-col>
-
-        <v-col cols="4">
-          <my-work :work="works[1]" height="100%" />
+        <v-col
+          v-for="work in works.slice(2)"
+          :key="work.title"
+          cols="4"
+        >
+          <my-work :work="work" height="100%" />
         </v-col>
 
         <v-col cols="4">
           <v-row class="">
-            <v-col cols="12" class="pt-0">
-              <my-work :work="works[2]" />
-            </v-col>
-
-            <v-col cols="12" class="pb-0">
-              <my-work :work="works[3]" />
+            <v-col
+              v-for="(work, index) in works.slice(-2)"
+              :key="work.title"
+              cols="12"
+              :class="index === 0 ? 'pt-0' : 'pb-0'"
+            >
+              <my-work :work="work" />
             </v-col>
           </v-row>
         </v-col>
       </v-row>
 
       <v-row v-else class="my-5">
-        <v-col xs="12" sm="6" md="6">
-          <my-work :work="works[0]" />
-        </v-col>
-
-        <v-col xs="12" sm="6" md="6">
-          <my-work :work="works[1]" />
-        </v-col>
-
-        <v-col xs="12" sm="6" md="6">
-          <my-work :work="works[2]" />
-        </v-col>
-
-        <v-col xs="12" sm="6" md="6">
-          <my-work :work="works[3]" />
+        <v-col
+          v-for="work in works"
+          :key="work.title"
+          xs="12"
+          sm="6"
+          md="6"
+        >
+          <my-work :work="work" />
         </v-col>
       </v-row>
     </div>
