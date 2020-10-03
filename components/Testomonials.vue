@@ -14,10 +14,10 @@
         <v-carousel-item
           v-for="testomonial in testomonials"
           :key="testomonial.title"
-          class="pb-12"
+          class="pb-12 mb-12"
         >
           <div class="headline py-10 grey--text text-center">
-            “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rutrum, tellus sed imperdiet sodales, dui diam accumsan lorem, a accumsan ex leo nec tellus. Phasellus varius dui neque, efficitur rutrum tellus luctus a. Pellentesque tincidunt convallis justo a tincidunt. Cras finibus tempor tellus sit amet congue.
+            “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rutrum, tellus sed imperdiet sodales, dui diam accumsan lorem, a accumsan ex leo nec tellus. Phasellus varius dui neque, efficitur rutrum tellus luctus a. Pellentesque tincidunt convallis justo a tincidunt. Cras finibus tempor tellus sit amet congue."
           </div>
 
           <v-list color="transparent" class="text-center">
