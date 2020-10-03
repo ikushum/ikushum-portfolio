@@ -2,10 +2,15 @@
   <v-container class="circle-bg min-full-vh d-flex align-center">
     <v-row>
       <v-col class="d-none d-lg-block" cols="12" lg="6">
-        <v-img contain src="/ishan.png" />
+        <v-img
+          contain
+          src="/ishan.png"
+          class="rounded-xl"
+          gradient="to left top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)"
+        />
       </v-col>
 
-      <v-col cols="12" lg="6" class="d-flex justify-center align-start flex-column text-left px-12">
+      <v-col cols="12" lg="6" class="d-flex justify-center align-start flex-column text-left px-lg-12">
         <h2 class="display-2">
           About Me
         </h2>
