@@ -50,10 +50,31 @@ export default {
   data () {
     return {
       works: [
-        { title: 'Podkite', description: 'A short description', image: 'https://picsum.photos/200' },
-        { title: 'Elastic Pod', description: 'A short description', image: 'https://picsum.photos/201' },
-        { title: 'Merojob', description: 'A short description', image: 'https://picsum.photos/202' },
-        { title: 'RealHRsoft', description: 'A short description', image: 'https://picsum.photos/203' }
+        {
+          title: 'Podkite',
+          description: 'Chart Analytics and Marketing Attribution for Podcasters',
+          image: '/works/podkite.png',
+          link: 'https://podkite.com/'
+        },
+        {
+          title: 'Merojob',
+          description: 'Nepal\'s Number One Job Portal',
+          image: '/works/merojob.png',
+          link: 'https://merojob.com/'
+        },
+        {
+          title: 'Elastic Pod',
+          description: 'Powerful In-audio Search For Podcasts',
+          image: '/works/elasticpod.png',
+          link: 'https://www.elasticpod.com/'
+        },
+        {
+          title: 'RealHRsoft',
+          description: 'Complete HR Intelligence Technology',
+          image: '/works/realhrsoft.png',
+          link: 'https://realhrsoft.com/'
+
+        }
       ]
     }
   }
