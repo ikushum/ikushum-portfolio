@@ -18,6 +18,7 @@
       color="#212427"
       inverted-scroll
       class="px-12"
+      height="65px"
       scroll-threshold="65"
     >
       <app-bar-content @show-nav-drawer="isDrawerOpen = true" />
