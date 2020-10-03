@@ -11,11 +11,11 @@
       </v-col>
 
       <v-col cols="12" lg="6" class="d-flex justify-center align-start flex-column text-left px-lg-12">
-        <h2 class="display-2">
+        <h2 class="display-2 my-5">
           About Me
         </h2>
 
-        <div class="my-5">
+        <!-- <div class="my-5">
           <h4 class="headline">
             Hello I'am <span class="primary--text font-italic"> Ishan Subedi</span>
           </h4>
@@ -23,13 +23,13 @@
           <h4 class="subtitle-1">
             Vue / Vuetify and Nuxt Developer
           </h4>
-        </div>
+        </div> -->
 
-        <p class="my-5 grey--text body-1">
+        <p class="my-5 grey--text headline">
           I'm a <strong> Freelance Frontend Engineer </strong> based in Kathmandu, Nepal.
-          Have been providing value to <strong> high profile clients </strong> like yourself for 4 years.
-          I've helped my clients build amazing web apps and watch them grow bigger and perform amazingly well
-          in the market
+          Have been providing value to <strong> high profile clients </strong> for 4 years.
+          I've helped my clients build amazing web solutions and watch them grow bigger and serve amazingly
+          well to the users.
         </p>
 
         <v-btn
