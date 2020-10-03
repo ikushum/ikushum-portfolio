@@ -1,66 +1,43 @@
 <template>
-  <v-container class="min-full-vh d-flex align-center">
+  <v-container class="min-full-vh d-flex align-center circle-bg">
     <div style="width:100%">
-      <h2 class="display-2">
+      <h2 class="display-2 my-10">
         Testomonials
       </h2>
 
       <v-carousel
         :show-arrows="false"
-        color="primary"
         light
-        cycle
         hide-delimiter-background
+        height="auto"
       >
         <v-carousel-item
           v-for="testomonial in testomonials"
           :key="testomonial.title"
+          class="pb-12"
         >
-          <v-sheet
-            tile
-            color="white"
-            :class="{'fill-height': $vuetify.breakpoint.mdAndUp}"
-          >
-            <v-row
-              align="center"
-              justify="center"
-              class="fill-height black--text circle-bg"
-            >
-              <v-col
-                xs="12"
-                sm="12"
-                md="6"
-              >
-                <v-list color="transparent">
-                  <v-list-item>
-                    <v-list-item-avatar size="100">
-                      <v-img src="https://cdn.vuetifyjs.com/images/john.png" />
-                    </v-list-item-avatar>
+          <div class="headline py-10 grey--text text-center">
+            “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rutrum, tellus sed imperdiet sodales, dui diam accumsan lorem, a accumsan ex leo nec tellus. Phasellus varius dui neque, efficitur rutrum tellus luctus a. Pellentesque tincidunt convallis justo a tincidunt. Cras finibus tempor tellus sit amet congue.
+          </div>
 
-                    <v-list-item-content>
-                      <v-list-item-title class="headline">
-                        John Leider
-                      </v-list-item-title>
-                      <v-list-item-title class="mt-2">
-                        Founder, Vuetify
-                      </v-list-item-title>
-                      <v-list-item-subtitle>john@vuetifyjs.com</v-list-item-subtitle>
-                    </v-list-item-content>
-                  </v-list-item>
-                </v-list>
-              </v-col>
+          <v-list color="transparent" class="text-center">
+            <v-list-item>
+              <v-list-item-avatar size="100" class="mx-auto">
+                <v-img src="https://cdn.vuetifyjs.com/images/john.png" />
+              </v-list-item-avatar>
+            </v-list-item>
 
-              <v-col
-                xs="12"
-                sm="12"
-                md="6"
-              >
-                <div class="body-1 py-10 grey--text text--darken-2">
-                  “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rutrum, tellus sed imperdiet sodales, dui diam accumsan lorem, a accumsan ex leo nec tellus. Phasellus varius dui neque, efficitur rutrum tellus luctus a. Pellentesque tincidunt convallis justo a tincidunt. Cras finibus tempor tellus sit amet congue.
-                </div>
-              </v-col>
-            </v-row>
-          </v-sheet>
+            <v-list-item>
+              <v-list-item-content>
+                <v-list-item-title class="headline">
+                  John Leider
+                </v-list-item-title>
+                <v-list-item-subtitle>
+                  Founder, Vuetify
+                </v-list-item-subtitle>
+              </v-list-item-content>
+            </v-list-item>
+          </v-list>
         </v-carousel-item>
       </v-carousel>
     </div>
