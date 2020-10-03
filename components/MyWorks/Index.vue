@@ -7,7 +7,7 @@
 
       <v-row v-if="$vuetify.breakpoint.lgAndUp" class="my-5">
         <v-col
-          v-for="work in works.slice(2)"
+          v-for="work in works.slice(0,2)"
           :key="work.title"
           cols="4"
         >
