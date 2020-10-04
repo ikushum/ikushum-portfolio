@@ -9,7 +9,10 @@
       height="90px"
       color="transparent"
     >
-      <app-bar-content @show-nav-drawer="isDrawerOpen = true" />
+      <app-bar-content
+        :menu-items="menuItems"
+        @show-nav-drawer="isDrawerOpen = true"
+      />
     </v-app-bar>
 
     <v-app-bar
@@ -21,7 +24,10 @@
       height="65px"
       scroll-threshold="65"
     >
-      <app-bar-content @show-nav-drawer="isDrawerOpen = true" />
+      <app-bar-content
+        :menu-items="menuItems"
+        @show-nav-drawer="isDrawerOpen = true"
+      />
     </v-app-bar>
 
     <v-navigation-drawer
@@ -123,11 +129,11 @@ export default {
       isDrawerOpen: false,
       menuItems: [
         { text: 'Home', goto: '#home' },
-        { text: 'About Me', goto: '#home' },
+        { text: 'About Me', goto: '#about' },
         { text: 'Works', goto: '#works' },
         { text: 'Expertise', goto: '#expertise' },
-        { text: 'Testomonials', goto: '#testomonials' }
-        // { text: 'Journal', goto: '#home' },
+        { text: 'Testomonials', goto: '#testomonials' },
+        { text: 'Journals', page: '/journals' }
         // { text: 'Contact', goto: '#home' }
       ]
     }

@@ -10,7 +10,7 @@
         :key="menuItem.text"
         text
         class="text-capitalize mx-2"
-        @click="$vuetify.goTo(menuItem.goto)"
+        @click="jumpTo(menuItem)"
       >
         {{ menuItem.text }}
       </v-btn>
@@ -28,17 +28,21 @@
 
 <script>
 export default {
-  data () {
-    return {
-      menuItems: [
-        { text: 'Home', goto: '#home' },
-        { text: 'About Me', goto: '#about' },
-        { text: 'Works', goto: '#works' },
-        { text: 'Expertise', goto: '#expertise' },
-        { text: 'Testomonials', goto: '#testomonials' }
-        // { text: 'Journal', goto: '#home' },
-        // { text: 'Contact', goto: '#home' }
-      ]
+  props: {
+    menuItems: {
+      type: Array,
+      required: true
+    }
+  },
+  methods: {
+    jumpTo (menuItem) {
+      if (menuItem.page) {
+        this.$router.push(menuItem.page)
+      }
+
+      if (document.querySelector(menuItem.goto)) {
+        this.$vuetify.goTo(menuItem.goto)
+      }
     }
   }
 }
