@@ -8,8 +8,9 @@
       <v-carousel
         :show-arrows="false"
         light
-        hide-delimiter-background
+        cycle
         height="auto"
+        hide-delimiter-background
       >
         <v-carousel-item
           v-for="testomonial in testomonials"
