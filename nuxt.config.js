@@ -4,7 +4,7 @@ export default {
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    titleTemplate: '%s - ishan-subedi',
+    titleTemplate: '%sIshan Subedi',
     title: 'Ishan Subedi',
     meta: [
       { charset: 'utf-8' },
@@ -16,6 +16,8 @@ export default {
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap' }
     ]
   },
+
+  loading: { color: '#E7A650', throttle: 0 },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
