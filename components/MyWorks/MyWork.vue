@@ -1,24 +1,26 @@
 <template>
-  <v-img
-    :src="work.image"
-    :height="height"
-    dark
-    class="rounded-lg pa-5"
-    gradient="to left top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.80)"
-  >
-    <div class="d-flex flex-column fill-height">
-      <h1>{{ work.title }}</h1>
-      <p class="caption">
-        {{ work.description }}
-      </p>
+  <v-hover v-slot:default="{ hover }">
+    <v-img
+      :src="work.image"
+      :height="height"
+      dark
+      class="rounded-lg pa-5"
+      :gradient="`to left top, rgba(0, 0, 0, ${hover ? 0.7 : 0.5}), rgba(0, 0, 0, ${hover ? 0.9 : 0.8})`"
+    >
+      <div class="d-flex flex-column fill-height">
+        <h1>{{ work.title }}</h1>
+        <p class="caption">
+          {{ work.description }}
+        </p>
 
-      <v-spacer />
+        <v-spacer />
 
-      <v-btn class="ml-auto" text small @click="openExternal(work)">
-        VISIT
-      </v-btn>
-    </div>
-  </v-img>
+        <v-btn class="ml-auto" text small @click="openExternal(work)">
+          VISIT
+        </v-btn>
+      </div>
+    </v-img>
+  </v-hover>
 </template>
 
 <script>
