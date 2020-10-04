@@ -51,8 +51,7 @@
           :key="menuItem.text"
           link
           class="text-capitalize mx-2 text-left"
-
-          @click="$vuetify.goTo(menuItem.goto), isDrawerOpen = false"
+          @click="navigate(menuItem)"
         >
           <v-list-item-content>
             {{ menuItem.text }}
@@ -136,6 +135,18 @@ export default {
         { text: 'Journals', page: '/journals' }
         // { text: 'Contact', goto: '#home' }
       ]
+    }
+  },
+  methods: {
+    navigate (menuItem) {
+      if (menuItem.page) {
+        this.$router.push(menuItem.page)
+      }
+
+      if (document.querySelector(menuItem.goto)) {
+        this.$vuetify.goTo(menuItem.goto)
+      }
+      this.isDrawerOpen = false
     }
   }
 }
