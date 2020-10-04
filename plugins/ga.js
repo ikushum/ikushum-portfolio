@@ -4,9 +4,6 @@ export default ({ app }) => {
   /*
    ** Only run on client-side and only in production mode
    */
-  console.log('--------------')
-  console.log(process.env.NODE_ENV)
-  console.log('--------------')
   if (process.env.NODE_ENV !== 'production')
     return /*
      ** Include Google Analytics Script
@@ -33,9 +30,6 @@ export default ({ app }) => {
   /*
    ** Set the current page
    */
-  console.log('--------------')
-  console.log(process.env.GOOGLE_ANALYTICS_TRACKING_ID)
-  console.log('--------------')
   ga('create', process.env.GOOGLE_ANALYTICS_TRACKING_ID, 'auto')
   /*
    ** Every time the route changes (fired on initialization too)
