@@ -7,6 +7,7 @@
       <my-works id="works" />
       <my-expertise id="expertise" />
       <testomonials id="testomonials" />
+      <my-journal id="journal" />
     </div>
   </div>
 </template>
@@ -17,7 +18,8 @@ import About from '@/components/About'
 import MyWorks from '@/components/MyWorks/Index'
 import MyExpertise from '@/components/MyExpertise'
 import Testomonials from '@/components/Testomonials'
+import MyJournal from '@/components/MyJournal'
 export default {
-  components: { AppHeader, About, MyWorks, MyExpertise, Testomonials }
+  components: { AppHeader, About, MyWorks, MyExpertise, Testomonials, MyJournal }
 }
 </script>

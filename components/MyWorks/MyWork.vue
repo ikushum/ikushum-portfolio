@@ -4,7 +4,7 @@
     :height="height"
     dark
     class="rounded-lg pa-5"
-    gradient="to left top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.85)"
+    gradient="to left top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.80)"
   >
     <div class="d-flex flex-column fill-height">
       <h1>{{ work.title }}</h1>
