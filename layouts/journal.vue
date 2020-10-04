@@ -1,0 +1,120 @@
+<template>
+  <v-app>
+    <v-app-bar
+      dark
+      fixed
+      color="#212427"
+      class="px-12"
+      height="65px"
+    >
+      <app-bar-content
+        :menu-items="menuItems"
+        @show-nav-drawer="isDrawerOpen = true"
+      />
+    </v-app-bar>
+
+    <v-navigation-drawer
+      v-model="isDrawerOpen"
+      fixed
+      dark
+      width="80%"
+      color="#212427"
+    >
+      <v-list class="py-0">
+        <v-list-item class="py-1">
+          <v-list-item-content>
+            <v-img contain max-width="100" src="/logo.svg" />
+          </v-list-item-content>
+        </v-list-item>
+
+        <v-divider />
+
+        <v-list-item
+          v-for="menuItem in menuItems"
+          :key="menuItem.text"
+          link
+          class="text-capitalize mx-2 text-left"
+
+          @click="$vuetify.goTo(menuItem.goto), isDrawerOpen = false"
+        >
+          <v-list-item-content>
+            {{ menuItem.text }}
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
+
+    <v-main>
+      <v-container style="max-width:2300px" class="pa-0">
+        <nuxt />
+      </v-container>
+    </v-main>
+
+    <v-footer class="pa-10" color="#212427">
+      <v-container>
+        <v-row align="center">
+          <v-col
+            cols="12"
+            md="3"
+          >
+            <v-img
+              :class="{'mx-auto': !$vuetify.breakpoint.mdAndUp}"
+              contain
+              max-width="150"
+              src="/logo.svg"
+            />
+          </v-col>
+
+          <v-col cols="12" md="7" class="text-center">
+            <v-btn v-for="menuItem in menuItems" :key="menuItem.text" dark text class="text-capitalize mx-2">
+              {{ menuItem.text }}
+            </v-btn>
+          </v-col>
+
+          <v-col class="text-center text-md-right" cols="12" md="2">
+            <v-icon
+              dark
+              class="mx-2"
+              @click="() => {}"
+            >
+              mdi-facebook
+            </v-icon>
+
+            <v-icon
+              dark
+              class="mx-2"
+              @click="() => {}"
+            >
+              mdi-instagram
+            </v-icon>
+
+            <v-icon
+              dark
+              class="mx-2"
+              @click="() => {}"
+            >
+              mdi-twitter
+            </v-icon>
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-footer>
+  </v-app>
+</template>
+
+<script>
+import AppBarContent from '@/components/AppBarContent'
+export default {
+  components: { AppBarContent },
+  data () {
+    return {
+      title: 'ikushum',
+      isDrawerOpen: false,
+      menuItems: [
+        { text: 'Portfolio', page: '/' },
+        { text: 'Journals', goto: '#journals' }
+      ]
+    }
+  }
+}
+</script>
