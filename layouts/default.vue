@@ -61,7 +61,7 @@
     </v-navigation-drawer>
 
     <v-main>
-      <v-container style="max-width:2300px" class="pa-0">
+      <v-container style="max-width:2300px" class="pa-0 pb-12">
         <nuxt />
       </v-container>
     </v-main>
