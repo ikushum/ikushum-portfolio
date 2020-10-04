@@ -37,6 +37,7 @@
                 small
                 color="primary"
                 class="text-capitalize"
+                @click="$router.push('/journals/the-mountains-are-calling-me')"
               >
                 Readmore
                 <v-icon>mdi-chevron-right</v-icon>

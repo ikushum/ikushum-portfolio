@@ -112,7 +112,7 @@ export default {
       isDrawerOpen: false,
       menuItems: [
         { text: 'Portfolio', page: '/' },
-        { text: 'Journals', goto: '#journals' }
+        { text: 'Journals', page: '/journals' }
       ]
     }
   }
