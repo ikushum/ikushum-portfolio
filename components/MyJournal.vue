@@ -58,8 +58,8 @@ export default {
         { title: 'Nuxt', description: 'A short description', image: 'https://picsum.photos/201' },
         { title: 'Vuetify', description: 'A short description', image: 'https://picsum.photos/202' },
         { title: 'Firebase', description: 'A short description', image: 'https://picsum.photos/203' },
-        { title: 'Vuetify', description: 'A short description', image: 'https://picsum.photos/204' },
-        { title: 'Firebase', description: 'A short description', image: 'https://picsum.photos/205' }
+        { title: 'SAAS', description: 'A short description', image: 'https://picsum.photos/204' },
+        { title: 'Tailwind', description: 'A short description', image: 'https://picsum.photos/205' }
       ]
     }
   }
