@@ -1,4 +1,8 @@
 export default {
+  env: {
+    GOOGLE_ANALYTICS_TRACKING_ID: process.env.GOOGLE_ANALYTICS_TRACKING_ID
+  },
+
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
 
