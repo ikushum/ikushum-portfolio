@@ -23,13 +23,24 @@
         large
         color="primary"
         depressed
-        @click="$vuetify.goTo('#about')"
+        @click="$emit('click-action')"
       >
-        About Me
+        {{ actionText }}
       </v-btn>
     </v-container>
   </v-img>
 </template>
+
+<script>
+export default {
+  props: {
+    actionText: {
+      type: String,
+      default: 'About Me'
+    }
+  }
+}
+</script>
 
 <style scoped>
 .display-2{

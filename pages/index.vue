@@ -1,13 +1,17 @@
 <template>
   <div>
-    <app-header id="home" style="margin-top:-90px" />
+    <app-header
+      id="home"
+      style="margin-top:-90px"
+      @click-action="$vuetify.goTo('#about')"
+    />
 
     <div class="px-sm-10 px-5">
       <about id="about" />
       <my-works id="works" />
       <my-expertise id="expertise" />
       <testomonials id="testomonials" />
-      <my-journal id="journal" />
+      <my-journal />
     </div>
   </div>
 </template>
@@ -20,6 +24,18 @@ import MyExpertise from '@/components/MyExpertise'
 import Testomonials from '@/components/Testomonials'
 import MyJournal from '@/components/MyJournal'
 export default {
-  components: { AppHeader, About, MyWorks, MyExpertise, Testomonials, MyJournal }
+  components: {
+    AppHeader,
+    About,
+    MyWorks,
+    MyExpertise,
+    Testomonials,
+    MyJournal
+  },
+  head () {
+    return {
+      title: ''
+    }
+  }
 }
 </script>
