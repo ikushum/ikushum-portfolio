@@ -15,7 +15,7 @@
           Namaste, I’m Ishan Subedi
         </h2>
         <h3 class="body-1">
-          From the roots of Himalaya
+          From the roots of Himalayas
         </h3>
       </div>
 
