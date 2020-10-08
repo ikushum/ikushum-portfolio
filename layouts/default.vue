@@ -137,7 +137,7 @@ export default {
         { text: 'Home', goto: '#home' },
         { text: 'About Me', goto: '#about' },
         { text: 'Works', goto: '#works' },
-        { text: 'Expertise', goto: '#expertise' },
+        // { text: 'Expertise', goto: '#expertise' },
         { text: 'Testomonials', goto: '#testomonials' },
         { text: 'Journals', page: '/journals' }
         // { text: 'Contact', goto: '#home' }
