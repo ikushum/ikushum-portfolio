@@ -26,10 +26,9 @@
         </div> -->
 
         <p class="my-5 grey--text headline">
-          I'm a <strong> Freelance Frontend Engineer </strong> based in Kathmandu, Nepal.
-          Have been providing value to <strong> high profile clients </strong> for 4 years.
-          I've helped my clients build amazing web solutions and watch them grow bigger and serve amazingly
-          well to the users.
+          I help businesses build <strong>  extraordinary web solutions </strong> and succeed together.
+          A Kathmandu based <strong> Frontend Engineer </strong> helping clients bring
+          their ideas into reality.
         </p>
 
         <v-btn

@@ -9,8 +9,8 @@
     <div class="px-sm-10 px-5">
       <about id="about" />
       <my-works id="works" />
-      <my-expertise id="expertise" />
       <testomonials id="testomonials" />
+      <!-- <my-expertise id="expertise" /> -->
       <my-journal />
     </div>
   </div>
@@ -20,7 +20,7 @@
 import AppHeader from '@/components/Header'
 import About from '@/components/About'
 import MyWorks from '@/components/MyWorks/Index'
-import MyExpertise from '@/components/MyExpertise'
+// import MyExpertise from '@/components/MyExpertise'
 import Testomonials from '@/components/Testomonials'
 import MyJournal from '@/components/MyJournal'
 export default {
@@ -28,7 +28,7 @@ export default {
     AppHeader,
     About,
     MyWorks,
-    MyExpertise,
+    // MyExpertise,
     Testomonials,
     MyJournal
   },
