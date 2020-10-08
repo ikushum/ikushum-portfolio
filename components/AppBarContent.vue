@@ -1,6 +1,6 @@
 <template>
   <v-container style="width:100%" class="d-flex">
-    <v-img contain max-width="100" src="/logo.svg" />
+    <v-img contain max-width="100" src="/logo.svg" class="cursor-pointer" @click="$router.push('/')" />
 
     <v-spacer />
 
@@ -47,3 +47,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+  .cursor-pointer {
+    cursor: pointer;
+  }
+</style>
