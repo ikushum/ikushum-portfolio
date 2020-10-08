@@ -82,7 +82,14 @@
           </v-col>
 
           <v-col cols="12" md="7" class="text-center">
-            <v-btn v-for="menuItem in menuItems" :key="menuItem.text" dark text class="text-capitalize mx-2">
+            <v-btn
+              v-for="menuItem in menuItems"
+              :key="menuItem.text"
+              dark
+              text
+              x-small
+              class="text-capitalize mx-2"
+            >
               {{ menuItem.text }}
             </v-btn>
           </v-col>
