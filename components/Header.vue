@@ -7,12 +7,12 @@
   >
     <v-container>
       <h1 class="display-2 font-weight-bold">
-        Vue / Vuetify And Nuxt Rockstar
+        Namaste, I’m Ishan Subedi
       </h1>
 
       <div class="my-10">
         <h2 class="headline">
-          Namaste, I’m Ishan Subedi
+          Frontend Engineer
         </h2>
         <h3 class="body-1">
           From the roots of Himalayas
