@@ -51,16 +51,16 @@ export default {
     return {
       works: [
         {
-          title: 'Podkite',
-          description: 'Chart Analytics and Marketing Attribution for Podcasters',
-          image: '/works/podkite.png',
-          link: 'https://podkite.com/'
-        },
-        {
           title: 'Merojob',
           description: 'Nepal\'s Number One Job Portal',
           image: '/works/merojob.png',
           link: 'https://merojob.com/'
+        },
+        {
+          title: 'Podkite',
+          description: 'Chart Analytics and Marketing Attribution for Podcasters',
+          image: '/works/podkite.png',
+          link: 'https://podkite.com/'
         },
         {
           title: 'Elastic Pod',
