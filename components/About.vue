@@ -1,11 +1,11 @@
 <template>
   <v-container class="circle-bg min-full-vh d-flex align-center">
     <v-row>
-      <v-col class="d-none d-lg-block" cols="12" lg="6">
+      <v-col class="d-none d-lg-block frame-border-bg pb-0" cols="12" lg="6">
         <v-img
           contain
           src="/ishan.png"
-          class="rounded-xl"
+          class="rounded-xl mt-5 ml-5"
           gradient="to left top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)"
         />
       </v-col>
@@ -50,6 +50,11 @@
     background-size: 40%;
     background-position: center;
     background-image: url('/circle.svg');
+  }
+  .frame-border-bg {
+    background-size: 90%;
+    background-position: left top;
+    background-image: url('/frame-border.svg');
   }
   .display-2{
     font-weight: bold;

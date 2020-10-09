@@ -1,6 +1,6 @@
 <template>
   <v-img
-    gradient="to right top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)"
+    gradient="to right top, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.7)"
     src="/header-bg.svg"
     cover
     class="full-vh black d-flex align-center text-center white--text"
