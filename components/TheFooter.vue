@@ -11,6 +11,8 @@
             contain
             max-width="150"
             src="/logo.svg"
+            class="cursor-pointer"
+            @click="$router.push('/')"
           />
         </v-col>
 
@@ -79,3 +81,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+  .cursor-pointer {
+    cursor: pointer;
+  }
+</style>
