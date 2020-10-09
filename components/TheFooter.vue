@@ -32,27 +32,13 @@
 
         <v-col class="text-center text-md-right" cols="12" md="2">
           <v-icon
+            v-for="(socialLink, index) in socialLinks"
+            :key="index"
             dark
             class="mx-2"
-            @click="() => {}"
+            @click="openExternal(socialLink.link)"
           >
-            mdi-facebook
-          </v-icon>
-
-          <v-icon
-            dark
-            class="mx-2"
-            @click="() => {}"
-          >
-            mdi-instagram
-          </v-icon>
-
-          <v-icon
-            dark
-            class="mx-2"
-            @click="() => {}"
-          >
-            mdi-twitter
+            {{ socialLink.icon }}
           </v-icon>
         </v-col>
       </v-row>
@@ -68,7 +54,19 @@ export default {
       required: true
     }
   },
+  data () {
+    return {
+      socialLinks: [
+        { icon: 'mdi-github', link: 'https://github.com/ikushum' },
+        { icon: 'mdi-linkedin', link: 'https://www.linkedin.com/in/ikushum/' },
+        { icon: 'mdi-gmail', link: 'mailto:ikushum@gmail.com' }
+      ]
+    }
+  },
   methods: {
+    openExternal (link) {
+      window.open(link)
+    },
     navigate (menuItem) {
       if (menuItem.page) {
         this.$router.push(menuItem.page)
