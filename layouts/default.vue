@@ -41,70 +41,16 @@
       </v-container>
     </v-main>
 
-    <v-footer class="pa-10" color="#212427">
-      <v-container>
-        <v-row align="center">
-          <v-col
-            cols="12"
-            md="3"
-          >
-            <v-img
-              :class="{'mx-auto': !$vuetify.breakpoint.mdAndUp}"
-              contain
-              max-width="150"
-              src="/logo.svg"
-            />
-          </v-col>
-
-          <v-col cols="12" md="7" class="text-center">
-            <v-btn
-              v-for="menuItem in menuItems"
-              :key="menuItem.text"
-              dark
-              text
-              x-small
-              class="text-capitalize mx-2"
-            >
-              {{ menuItem.text }}
-            </v-btn>
-          </v-col>
-
-          <v-col class="text-center text-md-right" cols="12" md="2">
-            <v-icon
-              dark
-              class="mx-2"
-              @click="() => {}"
-            >
-              mdi-facebook
-            </v-icon>
-
-            <v-icon
-              dark
-              class="mx-2"
-              @click="() => {}"
-            >
-              mdi-instagram
-            </v-icon>
-
-            <v-icon
-              dark
-              class="mx-2"
-              @click="() => {}"
-            >
-              mdi-twitter
-            </v-icon>
-          </v-col>
-        </v-row>
-      </v-container>
-    </v-footer>
+    <the-footer :menu-items="menuItems" />
   </v-app>
 </template>
 
 <script>
+import TheFooter from '@/components/TheFooter'
 import TheNavDrawer from '@/components/TheNavDrawer'
 import AppBarContent from '@/components/AppBarContent'
 export default {
-  components: { TheNavDrawer, AppBarContent },
+  components: { TheNavDrawer, AppBarContent, TheFooter },
   data () {
     return {
       isDrawerOpen: false,
