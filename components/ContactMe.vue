@@ -1,7 +1,7 @@
 <template>
   <v-container class="d-flex align-center text-center">
     <div style="width:100%">
-      <h2 class="display-2 my-12">
+      <h2 class="display-2 mt-12">
         Let's Work Together
       </h2>
 

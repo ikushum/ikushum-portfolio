@@ -1,6 +1,6 @@
 <template>
   <v-img
-    gradient="to right top, rgba(0, 0, 0, 0.33), rgba(0, 0, 0, 0.7)"
+    gradient="to right top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)"
     src="/header-bg.svg"
     cover
     class="full-vh black d-flex align-center text-center white--text"
@@ -10,9 +10,9 @@
         Namaste, I’m Ishan Subedi
       </h1>
 
-      <div class="my-10">
+      <div class="my-7">
         <h2 class="headline">
-          Frontend Engineer
+          Top Rated Frontend Engineer
         </h2>
         <h3 class="body-1">
           From the roots of Himalayas
@@ -28,6 +28,24 @@
         {{ actionText }}
       </v-btn>
     </v-container>
+
+    <v-footer class="socialIcons text-left transparent px-12">
+      <v-container>
+        <v-hover
+          v-for="(socialLink, index) in socialLinks"
+          :key="index"
+          v-slot:default="{ hover }"
+        >
+          <v-icon
+            :color="hover ? 'primary' : 'grey lighten-1'"
+            class="mr-5"
+            @click="openExternal(socialLink.link)"
+          >
+            {{ socialLink.icon }}
+          </v-icon>
+        </v-hover>
+      </v-container>
+    </v-footer>
   </v-img>
 </template>
 
@@ -38,6 +56,20 @@ export default {
       type: String,
       default: 'About Me'
     }
+  },
+  data () {
+    return {
+      socialLinks: [
+        { icon: 'mdi-github', link: 'https://github.com/ikushum' },
+        { icon: 'mdi-linkedin', link: 'https://www.linkedin.com/in/ikushum/' },
+        { icon: 'mdi-gmail', link: 'mailto:ikushum@gmail.com' }
+      ]
+    }
+  },
+  methods: {
+    openExternal (link) {
+      window.open(link)
+    }
   }
 }
 </script>
@@ -46,5 +78,10 @@ export default {
 .display-2{
   font-family: 'Playfair Display', serif !important;
   font-weight: bold;
+}
+.socialIcons {
+  width: 100%;
+  bottom: 40px;
+  position: absolute;
 }
 </style>
