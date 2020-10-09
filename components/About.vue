@@ -1,16 +1,20 @@
 <template>
   <v-container class="circle-bg min-full-vh d-flex align-center">
-    <v-row>
-      <v-col class="d-none d-lg-block frame-border-bg pb-0" cols="12" lg="6">
+    <v-row align="center">
+      <v-col class="d-none d-sm-block" sm="6" cols="12">
         <v-img
           contain
+          class="rounded-xl"
           src="/ishan.png"
-          class="rounded-xl mt-5 ml-5"
           gradient="to left top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)"
         />
       </v-col>
 
-      <v-col cols="12" lg="6" class="d-flex justify-center align-start flex-column text-left px-lg-12">
+      <v-col
+        sm="6"
+        cols="12"
+        class="d-flex justify-center align-start flex-column text-left px-lg-12"
+      >
         <h2 class="display-2 my-5">
           About Me
         </h2>
@@ -50,11 +54,6 @@
     background-size: 40%;
     background-position: center;
     background-image: url('/circle.svg');
-  }
-  .frame-border-bg {
-    background-size: 90%;
-    background-position: left top;
-    background-image: url('/frame-border.svg');
   }
   .display-2{
     font-weight: bold;
