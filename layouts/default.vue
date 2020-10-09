@@ -56,12 +56,12 @@ export default {
       isDrawerOpen: false,
       menuItems: [
         { text: 'Home', goto: '#home' },
-        { text: 'About Me', goto: '#about' },
+        { text: 'About', goto: '#about' },
         { text: 'Works', goto: '#works' },
         // { text: 'Expertise', goto: '#expertise' },
         { text: 'Testomonials', goto: '#testomonials' },
-        { text: 'Journals', page: '/journals' }
-        // { text: 'Contact', goto: '#home' }
+        { text: 'Journals', page: '/journals' },
+        { text: 'Contact', isCta: 'true', goto: '#contact' }
       ]
     }
   }

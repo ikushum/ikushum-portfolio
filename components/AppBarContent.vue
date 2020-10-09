@@ -8,7 +8,10 @@
       <v-btn
         v-for="menuItem in menuItems"
         :key="menuItem.text"
-        text
+        :text="!menuItem.isCta"
+        :outlined="!!menuItem.isCta"
+        :color="menuItem.isCta ? 'primary lighten-1' : 'white'"
+        depressed
         class="text-capitalize mx-2"
         @click="jumpTo(menuItem)"
       >

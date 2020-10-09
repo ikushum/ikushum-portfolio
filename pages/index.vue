@@ -12,25 +12,29 @@
       <testomonials id="testomonials" />
       <!-- <my-expertise id="expertise" /> -->
       <my-journal />
+      <contact-me id="contact" class="my-12" />
     </div>
   </div>
 </template>
 
 <script>
-import AppHeader from '@/components/Header'
 import About from '@/components/About'
-import MyWorks from '@/components/MyWorks/Index'
-// import MyExpertise from '@/components/MyExpertise'
-import Testomonials from '@/components/Testomonials'
+import AppHeader from '@/components/Header'
 import MyJournal from '@/components/MyJournal'
+import ContactMe from '@/components/ContactMe'
+import MyWorks from '@/components/MyWorks/Index'
+import Testomonials from '@/components/Testomonials'
+// import MyExpertise from '@/components/MyExpertise'
+
 export default {
   components: {
-    AppHeader,
     About,
     MyWorks,
+    ContactMe,
+    MyJournal,
+    AppHeader,
+    Testomonials
     // MyExpertise,
-    Testomonials,
-    MyJournal
   },
   head () {
     return {
