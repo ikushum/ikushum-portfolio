@@ -62,6 +62,12 @@
 
 <script>
 export default {
+  props: {
+    limit: {
+      type: [Number, String],
+      default: 6
+    }
+  },
   data () {
     return {
       journals: []
@@ -75,6 +81,7 @@ export default {
       this.journals = await this.$content('journals')
         .only(['createdAt', 'title', 'image', 'description', 'slug'])
         .sortBy('createdAt', 'desc')
+        .limit(this.limit)
         .fetch()
     },
     formatDate (date) {

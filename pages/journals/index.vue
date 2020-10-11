@@ -7,7 +7,7 @@
     />
 
     <div class="px-sm-10 px-5">
-      <my-journal id="journals" />
+      <my-journal id="journals" :limit="1000" />
     </div>
   </div>
 </template>
