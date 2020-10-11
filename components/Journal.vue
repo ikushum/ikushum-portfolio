@@ -1,43 +1,70 @@
 <template>
   <div class="py-5">
-    <div class="mb-12 text-center ">
+    <div class="mb-12 text-center">
       <h1 class="display-2">
-        The Mountains Are Calling Me
+        {{ journal.title }}
       </h1>
-      <p class="subtitle-1 grey--text my-5">
-        Feb 2, 2017
+
+      <p class="subtitle-1 grey--text mt-5 mb-3">
+        {{ formatDate(journal.createdAt) }}
         <span class="mx-5">/</span>
-        By Ishan Subedi
+        {{ journal.author }}
         <span class="mx-5">/</span>
-        Travel
+        {{ readTime }} min read
       </p>
+
+      <div class="text-center">
+        <v-hover
+          v-slot:default="{ hover }"
+        >
+          <v-btn
+            icon
+            :color="hover ? '#39a8df' : '#757575'"
+            target="_blank"
+            @click="tweet()"
+          >
+            <v-icon>
+              mdi-twitter
+            </v-icon>
+          </v-btn>
+        </v-hover>
+
+        <v-hover
+          v-slot:default="{ hover }"
+        >
+          <v-btn
+            :color="hover ? '#2777b5' : '#757575'"
+            icon
+            target="_blank"
+            @click="linkedInPost()"
+          >
+            <v-icon>mdi-linkedin</v-icon>
+          </v-btn>
+        </v-hover>
+
+        <v-hover
+          v-slot:default="{ hover }"
+        >
+          <v-btn
+            :color="hover ? '#4866aa' : '#757575'"
+            icon
+            target="_blank"
+            @click="facebookPost()"
+          >
+            <v-icon>mdi-facebook</v-icon>
+          </v-btn>
+        </v-hover>
+      </div>
     </div>
 
     <v-img
       height="70vh"
       :src="journal.image"
-      class="rounded-lg"
       gradient="to left top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)"
     />
 
     <div class="content my-12 mx-auto">
-      <p class="grey--text text--darken-3">
-        Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur. Curabitur blandit tempus porttitor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam quis risus eget porta ac consectetur vestibulum.
-
-        <br>
-        <br>
-
-        Donec sed odio dui consectetur adipiscing elit. Etiam adipiscing tincidunt elit, eu convallis felis suscipit ut. Phasellus rhoncus tincidunt auctor. Nullam eu sagittis mauris. Donec non dolor ac elit aliquam tincidunt at at sapien. Aenean tortor libero, condimentum ac laoreet vitae, varius tempor nisi. Duis non arcu vel lectus urna mollis ornare vel eu leo.
-
-        <v-img
-          height="300"
-          src="https://picsum.photos/400/400"
-          class="rounded-lg my-10"
-          gradient="to left top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)"
-        />
-
-        Donec sed odio dui consectetur adipiscing elit. Etiam adipiscing tincidunt elit, eu convallis felis suscipit ut. Phasellus rhoncus tincidunt auctor. Nullam eu sagittis mauris. Donec non dolor ac elit aliquam tincidunt at at sapien. Aenean tortor libero, condimentum ac laoreet vitae, varius tempor nisi. Duis non arcu vel lectus urna mollis ornare vel eu leo.
-      </p>
+      <nuxt-content :document="journal" />
     </div>
   </div>
 </template>
@@ -48,6 +75,82 @@ export default {
     journal: {
       type: Object,
       required: true
+    }
+  },
+  computed: {
+    readTime () {
+      let minutes = 0
+      const contentText = JSON.stringify(this.journal)
+      const words = contentText.split(' ').length
+      const wordsPerMinute = 200
+      minutes = Math.ceil(words / wordsPerMinute)
+      return minutes
+    }
+  },
+  methods: {
+    formatDate (date) {
+      const options = { year: 'numeric', month: 'long', day: 'numeric' }
+      return new Date(date).toLocaleDateString('en', options)
+    },
+    tweet () {
+      const tweetURL =
+        'https://twitter.com/intent/tweet?text=' +
+        document.title +
+        '&url=' +
+        location.href
+      window.open(tweetURL)
+    },
+
+    linkedInPost () {
+      const linkedInPostURL =
+        'https://www.linkedin.com/shareArticle/?mini=true&url=' + location.href
+      this.PopupCenter(linkedInPostURL, 500, 500)
+    },
+
+    facebookPost () {
+      const fbPostURL =
+        'https://www.facebook.com/sharer/sharer.php?u=' +
+        location.href +
+        '&display=page'
+      window.open(fbPostURL)
+    },
+
+    PopupCenter (url, w, h) {
+      const dualScreenLeft =
+        window.screenLeft !== undefined ? window.screenLeft : screen.left
+      const dualScreenTop =
+        window.screenTop !== undefined ? window.screenTop : screen.top
+
+      const width = window.innerWidth
+        ? window.innerWidth
+        : document.documentElement.clientWidth
+          ? document.documentElement.clientWidth
+          : screen.width
+      const height = window.innerHeight
+        ? window.innerHeight
+        : document.documentElement.clientHeight
+          ? document.documentElement.clientHeight
+          : screen.height
+
+      const left = width / 2 - w / 2 + dualScreenLeft
+      const top = height / 2 - h / 2 + dualScreenTop
+      const newWindow = window.open(
+        url,
+        '_blank',
+        'scrollbars=yes, width=' +
+          w +
+          ', height=' +
+          h +
+          ', top=' +
+          top +
+          ', left=' +
+          left
+      )
+
+      // Puts focus on the newWindow
+      if (window.focus) {
+        newWindow.focus()
+      }
     }
   }
 }

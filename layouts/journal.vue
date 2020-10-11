@@ -45,3 +45,31 @@ export default {
   }
 }
 </script>
+
+<style>
+.nuxt-content-highlight > .filename {
+  font-family: Roboto;
+  right: 0;
+  top: 0;
+  position: absolute;
+  margin-right: 0.8rem;
+  font-size: 0.8rem;
+  color: rgba(203, 213, 224, 1);
+  font-weight: 300;
+  z-index: 10;
+  margin-top: 0.5rem;
+}
+.v-application code {
+  all: initial;
+  all: unset;
+  font-size: 1rem;
+  font-family: Consolas, Roboto Mono, monospace;
+}
+.nuxt-content-highlight {
+  font-family: Consolas;
+  font-size: 1rem;
+  position: relative;
+  z-index: 1;
+  border-radius: 6px;
+}
+</style>
