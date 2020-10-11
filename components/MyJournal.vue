@@ -18,6 +18,7 @@
             tile
             height="100%"
             class="d-flex flex-column"
+            @click="$router.push(`/journals/${journal.slug}`)"
           >
             <v-img
               :src="`/journals/${journal.slug}/${journal.image}`"
