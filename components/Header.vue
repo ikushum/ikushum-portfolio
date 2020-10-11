@@ -11,40 +11,31 @@
       </h1>
 
       <div class="my-7">
-        <h2 class="headline">
-          Top Rated Frontend Engineer
+        <h2 class="body-1">
+          Top rated Frontend Engineer
+          from the roots of Himalayas
         </h2>
-        <h3 class="body-1">
-          From the roots of Himalayas
-        </h3>
       </div>
 
-      <v-btn
-        large
-        color="primary"
-        depressed
-        @click="$emit('click-action')"
-      >
-        {{ actionText }}
-      </v-btn>
-    </v-container>
-
-    <v-footer class="socialIcons text-left transparent px-12">
-      <v-container>
+      <div class="mx-auto my-7">
         <v-hover
           v-for="(socialLink, index) in socialLinks"
           :key="index"
           v-slot:default="{ hover }"
         >
           <v-icon
-            :color="hover ? 'primary' : 'grey lighten-1'"
-            class="mr-5"
+            :color="hover ? 'primary' : 'white'"
+            class="mx-2"
             @click="openExternal(socialLink.link)"
           >
             {{ socialLink.icon }}
           </v-icon>
         </v-hover>
-      </v-container>
+      </div>
+    </v-container>
+
+    <v-footer class="socialIcons text-left transparent px-12">
+      <v-container />
     </v-footer>
   </v-img>
 </template>

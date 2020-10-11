@@ -1,5 +1,5 @@
 <template>
-  <v-footer class="pa-10" color="#212427">
+  <v-footer class="px-10" color="#212427">
     <v-container>
       <v-row align="center">
         <v-col
@@ -9,7 +9,7 @@
           <v-img
             :class="{'mx-auto': !$vuetify.breakpoint.mdAndUp}"
             contain
-            max-width="150"
+            max-width="100"
             src="/logo.svg"
             class="cursor-pointer"
             @click="$router.push('/')"

@@ -9,10 +9,11 @@
         v-for="menuItem in menuItems"
         :key="menuItem.text"
         :text="!menuItem.isCta"
-        :outlined="!!menuItem.isCta"
-        :color="menuItem.isCta ? 'primary lighten-1' : 'white'"
+        :color="menuItem.isCta ? 'primary' : 'white'"
+        :class="{'text-capitalize': !menuItem.isCta}"
+        tile
         depressed
-        class="text-capitalize mx-2"
+        class="mx-2"
         @click="jumpTo(menuItem)"
       >
         {{ menuItem.text }}

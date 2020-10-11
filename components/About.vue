@@ -4,7 +4,6 @@
       <v-col class="d-none d-sm-block" sm="6" cols="12">
         <v-img
           contain
-          class="rounded-xl"
           src="/ishan.png"
           gradient="to left top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)"
         />
@@ -35,15 +34,20 @@
           their ideas into reality.
         </p>
 
-        <v-btn
-          large
-          color="primary"
-          depressed
-          class="my-5"
-          @click="$vuetify.goTo('#works')"
+        <v-hover
+          v-slot:default="{ hover }"
         >
-          See my Works
-        </v-btn>
+          <v-btn
+            tile
+            large
+            outlined
+            class="my-5"
+            :color="hover ? 'primary' : 'black'"
+            @click="$vuetify.goTo('#works')"
+          >
+            See my Works
+          </v-btn>
+        </v-hover>
       </v-col>
     </v-row>
   </v-container>

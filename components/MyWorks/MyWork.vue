@@ -4,8 +4,9 @@
       :src="work.image"
       :height="height"
       dark
-      class="rounded-lg pa-5"
+      class="pa-5 cursor-pointer"
       :gradient="`to left top, rgba(0, 0, 0, ${hover ? 0.7 : 0.5}), rgba(0, 0, 0, ${hover ? 0.9 : 0.8})`"
+      @click="openExternal(work)"
     >
       <div class="d-flex flex-column fill-height">
         <h1>{{ work.title }}</h1>
@@ -15,9 +16,19 @@
 
         <v-spacer />
 
-        <v-btn class="ml-auto" text small @click="openExternal(work)">
+        <v-btn
+          v-if="hover"
+          tile
+          dark
+          depressed
+          outlined
+          class="mx-auto"
+          @click="openExternal(work)"
+        >
           VISIT
         </v-btn>
+
+        <v-spacer />
       </div>
     </v-img>
   </v-hover>
@@ -46,3 +57,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+  .cursor-pointer {
+    cursor: pointer;
+  }
+</style>
