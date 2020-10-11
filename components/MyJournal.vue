@@ -22,7 +22,7 @@
             <v-img
               :src="`/journals/${journal.slug}/${journal.image}`"
               height="250px"
-              gradient="to left top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)"
+              gradient="to left top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)"
             />
 
             <v-card-title class="title-text px-0 pb-2 line-height-25">
