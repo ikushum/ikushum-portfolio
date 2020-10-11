@@ -59,8 +59,8 @@
 
     <v-img
       height="70vh"
-      :src="journal.image"
-      gradient="to left top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)"
+      :src="`/journals/${journal.slug}/${journal.image}`"
+      gradient="to left top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)"
     />
 
     <div class="content my-12 mx-auto">

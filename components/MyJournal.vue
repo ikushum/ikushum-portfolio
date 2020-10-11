@@ -13,9 +13,14 @@
           sm="6"
           md="4"
         >
-          <v-card flat tile>
+          <v-card
+            flat
+            tile
+            height="100%"
+            class="d-flex flex-column"
+          >
             <v-img
-              :src="journal.image"
+              :src="`/journals/${journal.slug}/${journal.image}`"
               height="250px"
               gradient="to left top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)"
             />
@@ -27,6 +32,8 @@
             <v-card-text class="px-0 pb-2 line-height-25">
               {{ truncateString(journal.description, 100) }}
             </v-card-text>
+
+            <v-spacer />
 
             <v-card-actions class="pt-0 px-0">
               <div class="caption grey--text">
@@ -40,7 +47,7 @@
                 small
                 color="primary"
                 class="text-capitalize"
-                @click="$router.push(`journals/${journal.slug}`)"
+                @click="$router.push(`/journals/${journal.slug}`)"
               >
                 Readmore
                 <v-icon>mdi-chevron-right</v-icon>
@@ -67,7 +74,7 @@ export default {
     async fetchJournals () {
       this.journals = await this.$content('journals')
         .only(['createdAt', 'title', 'image', 'description', 'slug'])
-        .sortBy('createdAt', 'asc')
+        .sortBy('createdAt', 'desc')
         .fetch()
     },
     formatDate (date) {
@@ -95,6 +102,7 @@ export default {
     line-height: 25px;
   }
   .display-2, .title-text{
+    word-break: normal;
     font-weight: bold;
     font-family: 'Playfair Display', serif !important;
   }

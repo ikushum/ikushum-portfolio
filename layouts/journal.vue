@@ -47,6 +47,55 @@ export default {
 </script>
 
 <style>
+.nuxt-content h2 {
+  font-weight: 500;
+  font-size: 30px;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid #eaecef;
+  margin-bottom: 1rem;
+}
+
+.nuxt-content h3 {
+  font-weight: 400;
+  font-size: 22px;
+}
+
+.nuxt-content p {
+  font-size: 16px;
+  margin-bottom: 30px;
+  word-spacing: 2px;
+  line-height: 32px;
+}
+
+.nuxt-content ul {
+  font-size: 16px;
+  margin-bottom: 30px;
+  word-spacing: 2px;
+  line-height: 32px;
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
+.nuxt-content li {
+  font-size: 16px;
+  word-spacing: 2px;
+  line-height: 32px;
+}
+
+/* For code syntac highlighting */
+.nuxt-content-highlight {
+  font-family: Consolas;
+  font-size: 16px;
+  position: relative;
+  z-index: 1;
+  border-radius: 6px;
+  margin-bottom: 30px;
+}
 .nuxt-content-highlight > .filename {
   font-family: Roboto;
   right: 0;
@@ -62,14 +111,8 @@ export default {
 .v-application code {
   all: initial;
   all: unset;
-  font-size: 1rem;
+  font-size: 16px;
   font-family: Consolas, Roboto Mono, monospace;
 }
-.nuxt-content-highlight {
-  font-family: Consolas;
-  font-size: 1rem;
-  position: relative;
-  z-index: 1;
-  border-radius: 6px;
-}
+
 </style>
