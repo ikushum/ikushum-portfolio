@@ -76,6 +76,15 @@ export default {
     }
   },
 
+  generate: {
+    async routes () {
+      const { $content } = require('@nuxt/content')
+      const journals = await $content('journals').only(['slug']).fetch()
+
+      return journals.map(journal => `/journals/${journal.slug}`)
+    }
+  },
+
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
   }
