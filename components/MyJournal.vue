@@ -48,7 +48,7 @@
                 small
                 color="primary"
                 class="text-capitalize"
-                @click="$router.push(`/journals/${journal.slug}`)"
+                :href="`/journals/${journal.slug}`"
               >
                 Readmore
                 <v-icon>mdi-chevron-right</v-icon>

@@ -20,8 +20,7 @@
           v-if="hover"
           tile
           dark
-          depressed
-          outlined
+          text
           class="mx-auto"
           @click="openExternal(work)"
         >
