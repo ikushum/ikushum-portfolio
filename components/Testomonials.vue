@@ -69,7 +69,7 @@ export default {
           name: 'Cécile G.',
           designation: 'Risk Manager / BI specialist',
           image: require('@/assets/images/clients/cg.jpg'),
-          feedback: 'We really liked working with Ishan. He worked fast and well. He understood our writing requirements easily and even made suggestions.'
+          feedback: 'We really liked working with Ishan. He worked fast and well. He understood our documented requirements easily and even made suggestions.'
         }
       ]
     }
