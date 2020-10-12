@@ -108,7 +108,7 @@ export default {
   z-index: 10;
   margin-top: 0.5rem;
 }
-.v-application code {
+.nuxt-content-highlight code {
   all: initial;
   all: unset;
   font-size: 16px;
