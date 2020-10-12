@@ -3,6 +3,7 @@ title: Is Microsoft heading towards the open-source?
 description: Technology is always changing. If we don't keep up with the changes taking place in the tech world, we are gonna get left behind.
 image: 1.jpg
 author: Ishan Subedi
+isHidden: true
 createdAt: 2017-05-09
 ---
 

@@ -18,15 +18,19 @@
             tile
             height="100%"
             class="d-flex flex-column"
-            @click="$router.push(`/journals/${journal.slug}`)"
           >
             <v-img
               :src="`/journals/${journal.slug}/${journal.image}`"
               height="250px"
               gradient="to left top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)"
+              class="cursor-pointer"
+              @click="$router.push(`/journals/${journal.slug}`)"
             />
 
-            <v-card-title class="title-text px-0 pb-2 line-height-25">
+            <v-card-title
+              class="title-text px-0 pb-2 line-height-25 cursor-pointer"
+              @click="$router.push(`/journals/${journal.slug}`)"
+            >
               {{ journal.title }}
             </v-card-title>
 
@@ -66,7 +70,7 @@ export default {
   props: {
     limit: {
       type: [Number, String],
-      default: 6
+      default: 3
     }
   },
   data () {
@@ -102,6 +106,9 @@ export default {
 </script>
 
 <style scoped>
+  .cursor-pointer {
+    cursor: pointer;
+  }
   .circle-bg {
     background-size: contain;
     background-position: right;

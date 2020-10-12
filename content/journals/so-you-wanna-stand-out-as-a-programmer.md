@@ -3,6 +3,7 @@ title: So you wanna stand out as a Programmer?
 description: If you want to go one step ahead, make a habit of solving coding challenges on sites like HackerRank and Codewars on daily basis.
 image: 1.jpg
 author: Ishan Subedi
+isHidden: true
 createdAt: 2017-12-23
 ---
 
