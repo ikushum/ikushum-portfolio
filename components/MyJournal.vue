@@ -30,7 +30,7 @@
               {{ journal.title }}
             </v-card-title>
 
-            <v-card-text class="px-0 pb-2 line-height-25">
+            <v-card-text class="px-0 pb-2 line-height-25 grey--text">
               {{ truncateString(journal.description, 100) }}
             </v-card-text>
 
