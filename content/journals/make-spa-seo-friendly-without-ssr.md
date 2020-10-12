@@ -1,6 +1,6 @@
 ---
 title: Making Vue/Nuxt apps Search Engine friendly without SSR
-description: The concept of pre-rendering is not much highlighted in the Nuxt documentation
+description: Sometimes, deploying a frontend app with a separate server just for the sake of SEO reasons is a huge overkill.
 image: 1.jpeg
 author: Ishan Subedi
 ---
@@ -61,7 +61,7 @@ Let's suppose we are creating a website for a game with a certain number of feat
 - `/feature/super-fast`
 
 The structure of the folder inside `pages` might be: 
- `/pages/feature/_featureName`
+ `/pages/feature/_featureName.vue`
 
 In this case, we can easily pre-render the individual feature pages by adding `generate.routes` property in `nuxt.config.js`
 
