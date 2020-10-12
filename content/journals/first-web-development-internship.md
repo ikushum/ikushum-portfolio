@@ -3,6 +3,7 @@ title: My First Web Development Internship
 description: I got my first web development internship at Techrise. Techrise is a startup based here at Kathmandu which offers bootcamp on Ruby on Rails through their online platform.
 image: 1.jpg
 author: Ishan Subedi
+isHidden: true
 createdAt: 2016-11-11
 ---
 

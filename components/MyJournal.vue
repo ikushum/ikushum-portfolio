@@ -80,6 +80,7 @@ export default {
   methods: {
     async fetchJournals () {
       this.journals = await this.$content('journals')
+        .where({ isHidden: { $ne: true } })
         .only(['createdAt', 'title', 'image', 'description', 'slug'])
         .sortBy('createdAt', 'desc')
         .limit(this.limit)

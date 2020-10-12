@@ -3,6 +3,7 @@ title: Looking back into the Freshman year as a Sophomore
 description: I am actually writing this post after a week of entering the Sophomore year of college.
 image: 1.jpg
 author: Ishan Subedi
+isHidden: true
 createdAt: 2017-02-16
 ---
 
