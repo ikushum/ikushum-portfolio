@@ -13,21 +13,6 @@
         <p class="caption">
           {{ work.description }}
         </p>
-
-        <v-spacer />
-
-        <v-btn
-          v-if="hover"
-          tile
-          dark
-          text
-          class="mx-auto"
-          @click="openExternal(work)"
-        >
-          VISIT
-        </v-btn>
-
-        <v-spacer />
       </div>
     </v-img>
   </v-hover>
