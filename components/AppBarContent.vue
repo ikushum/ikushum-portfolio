@@ -9,7 +9,8 @@
         v-for="menuItem in menuItems"
         :key="menuItem.text"
         :text="!menuItem.isCta"
-        :color="menuItem.isCta ? 'primary' : 'white'"
+        :outlined="!!menuItem.isCta"
+        :color="menuItem.isCta ? 'primary lighten-1' : 'white'"
         :class="{'text-capitalize': !menuItem.isCta}"
         tile
         depressed
