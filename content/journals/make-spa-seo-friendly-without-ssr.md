@@ -19,7 +19,17 @@ Vue applications, by default, are not Search Engine optimized. The content of th
 </html>
 ```
 
- The concept explained in this post is called **pre-rendering**. Prerendering is a process to preload all elements on the page in preparation for a web crawler to see it. In terms of Nuxt.js, for every file inside the `/pages` directory, an `<filename>.html` file will be generated with all the necessary content required for the crawlers. 
+ The concept explained in this post is called **Pre-rendering**. Pre-rendering is a process to preload all elements on the page in preparation for a web crawler to see it. In terms of Nuxt.js, for every file inside the `/pages` directory, an `<filename>.html` file will be generated with all the necessary content required for the crawlers. 
+
+## How pre-rendering works
+
+When we are using Server-Side Rendering(SSR), Node runs a server and generates pages on-demand as we request them. On the other hand, in the case of pre-rendering, the same Node script runs but instead of generating then during the runtime (ie, only when we request them), they are generated during the build time (when we actually build the app before deploying to production). This way, we don't need a node.js server running on the production environment because we generate the pages before-hand. 
+
+And exactly like how SSR works,  the pre-rendered pages are requested by the browser only for the first load. After that, all the internal navigation is handled by Vue just like a normal SPA. This is an amazing thing because we retail the SPA capabilities, maintain good SEO, and all of that without having to manage a server.
+
+## When not to use pre-rendering
+
+Pre-rendering makes sense if we have all the data required for the search engine, available during the build time. If the data lives in a remote database or a backend service and keeps on changing during runtime, we definitely need to go for Server Side Rendering.
 
 ## How to pre-render Nuxt.js applications
 
