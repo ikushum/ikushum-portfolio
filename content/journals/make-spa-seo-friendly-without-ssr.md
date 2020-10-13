@@ -23,9 +23,9 @@ Vue applications, by default, are not Search Engine optimized. The content of th
 
 ## How pre-rendering works
 
-When we are using Server-Side Rendering(SSR), Node runs a server and generates pages on-demand as we request them. On the other hand, in the case of pre-rendering, the same Node script runs but instead of generating then during the runtime (ie, only when we request them), they are generated during the build time (when we actually build the app before deploying to production). This way, we don't need a node.js server running on the production environment because we generate the pages before-hand. 
+When we use Server-Side Rendering(SSR), Node runs a server and generates pages on-demand as we request them. On the other hand, in the case of pre-rendering, the same Node script runs but instead of generating them during runtime (ie, when we request them in the production environment), they are generated during the build time (ie, when we build the app before deploying to production). This way, we don't need to have a node server running on the production environment because we generate the pages before-hand. 
 
-And exactly like how SSR works,  the pre-rendered pages are requested by the browser only for the first load. After that, all the internal navigation is handled by Vue just like a normal SPA. This is an amazing thing because we retail the SPA capabilities, maintain good SEO, and all of that without having to manage a server.
+And exactly like how SSR works,  the pre-rendered pages are requested by the browser only for the first load. After that, all the internal navigation is handled by Vue just like a normal SPA. This is an amazing thing because we retail the SPA capabilities, maintaining good SEO, and all of that without having to manage a server.
 
 ## When not to use pre-rendering
 
