@@ -60,6 +60,12 @@ export default {
     return {
       testomonials: [
         {
+          name: 'Jalal Fathi',
+          designation: 'Founder & Chief Podkiter at Podkite',
+          image: require('@/assets/images/clients/jay.jpeg'),
+          feedback: 'Ishan picked tasks up in a timely manner and was able to communicate complex challenges with ease. What I most enjoyed about working with Ishan is the fact that I could trust him as a person and the speed he familiarized himself with new technologies and challenges. Your team will thrive with Ishan.'
+        },
+        {
           name: 'Nikita Kutselev',
           designation: 'Senior Big Data DevOps Engineer',
           image: require('@/assets/images/clients/nikita.jpeg'),
