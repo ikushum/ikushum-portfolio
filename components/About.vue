@@ -5,6 +5,7 @@
         <v-img
           contain
           src="/ishan.png"
+          lazy-src="/ishan-lazy.jpg"
           gradient="to left top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)"
         />
       </v-col>
