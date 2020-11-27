@@ -21,7 +21,7 @@ Reflecting back at the internship, I unlearned another huge misconception we hav
 
 If you're looking at college as an investment for your education or your future, then there is a better option. It has worked wonders for me and it's called the ** Internet**. If you have a device that has access to the internet, you essentially have access to the entire human knowledge.
 
-<div class="display-1 text-center grey--text mb-10">
+<div class="display-1 grey--text text--darken-2 mb-10">
 "There is no greater education than the one that is self-driven. — Neil deGrasse Tyson"
 </div>
 
