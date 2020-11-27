@@ -68,7 +68,7 @@
     </div>
 
     <div class="content mx-auto mt-16">
-      <Disqus shortname="ishansubedi-2" />
+      <Disqus shortname="ishansubedi" />
     </div>
   </div>
 </template>
