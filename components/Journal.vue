@@ -66,11 +66,19 @@
     <div class="content my-12 mx-auto">
       <nuxt-content :document="journal" />
     </div>
+
+    <div class="content mx-auto mt-16">
+      <Disqus shortname="ishansubedi-2" />
+    </div>
   </div>
 </template>
 
 <script>
+import { Disqus } from 'vue-disqus'
 export default {
+  components: {
+    Disqus
+  },
   props: {
     journal: {
       type: Object,
