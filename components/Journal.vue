@@ -58,7 +58,7 @@
     </div>
 
     <v-img
-      height="70vh"
+      :height="$vuetify.breakpoint.mdAndUp ? '70vh' : '50vh'"
       :src="`/journals/${journal.slug}/${journal.image}`"
       gradient="to left top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)"
     />
