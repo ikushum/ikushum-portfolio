@@ -27,8 +27,8 @@ import Testomonials from '@/components/Testomonials'
 // import MyExpertise from '@/components/MyExpertise'
 
 const seo = {
-  title: 'Ishan Subedi - Frontend Engineer',
-  description: 'Top rated Frontend Engineer from the roots of Himalayas',
+  title: 'Ishan Subedi - Top rated Frontend Engineer',
+  description: 'I help businesses build extraordinary web solutions and succeed together. A Kathmandu based Frontend Engineer helping clients bring their ideas into reality.',
   image: require('@/assets/images/preview.png'),
   og: {
     type: 'website'

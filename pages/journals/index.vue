@@ -18,7 +18,7 @@ import MyJournal from '@/components/MyJournal'
 
 const seo = {
   title: 'Journals - Ishan Subedi',
-  description: 'Journals by Ishan Subedi',
+  description: 'I help businesses build extraordinary web solutions and succeed together. A Kathmandu based Frontend Engineer helping clients bring their ideas into reality.',
   image: require('@/assets/images/preview.png'),
   og: {
     type: 'website'
