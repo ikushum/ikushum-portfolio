@@ -31,19 +31,6 @@ export default {
           content: this.journal.description
         },
         { hid: 'og:type', property: 'og:type', content: 'article' },
-
-        // Twitter Card
-        {
-          hid: 'twitter:title',
-          name: 'twitter:title',
-          content: this.journal.title
-        },
-        {
-          hid: 'twitter:description',
-          name: 'twitter:description',
-          content: this.journal.description
-        },
-
         {
           hid: 'og:image',
           property: 'og:image',
@@ -57,7 +44,24 @@ export default {
         {
           hid: 'og:image:alt',
           property: 'og:image:alt',
-          content: this.journal.image
+          content: this.journal.title
+        },
+
+        // Twitter Card
+        {
+          hid: 'twitter:title',
+          name: 'twitter:title',
+          content: this.journal.title
+        },
+        {
+          hid: 'twitter:description',
+          name: 'twitter:description',
+          content: this.journal.description
+        },
+        {
+          hid: 'twitter:card',
+          name: 'twitter:card',
+          content: 'summary_large_image'
         },
         {
           hid: 'twitter:image',

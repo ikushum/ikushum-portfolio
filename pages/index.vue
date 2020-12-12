@@ -26,6 +26,15 @@ import MyWorks from '@/components/MyWorks/Index'
 import Testomonials from '@/components/Testomonials'
 // import MyExpertise from '@/components/MyExpertise'
 
+const seo = {
+  title: 'Ishan Subedi - Frontend Engineer',
+  description: 'Top rated Frontend Engineer from the roots of Himalayas',
+  image: require('@/assets/images/preview.png'),
+  og: {
+    type: 'website'
+  }
+}
+
 export default {
   components: {
     About,
@@ -38,7 +47,61 @@ export default {
   },
   head () {
     return {
-      title: ''
+      title: seo.title,
+      titleTemplate: '',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: seo.description
+        },
+
+        // Open Graph
+        { hid: 'og:title', property: 'og:title', content: seo.title },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: seo.description
+        },
+        { hid: 'og:type', property: 'og:type', content: seo.og.type },
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content: seo.image
+        },
+        {
+          hid: 'og:image:secure_url',
+          property: 'og:image:secure_url',
+          content: seo.image
+        },
+        {
+          hid: 'og:image:alt',
+          property: 'og:image:alt',
+          content: seo.title
+        },
+
+        // Twitter Card
+        {
+          hid: 'twitter:title',
+          name: 'twitter:title',
+          content: seo.title
+        },
+        {
+          hid: 'twitter:description',
+          name: 'twitter:description',
+          content: seo.description
+        },
+        {
+          hid: 'twitter:card',
+          name: 'twitter:card',
+          content: 'summary_large_image'
+        },
+        {
+          hid: 'twitter:image',
+          name: 'twitter:image',
+          content: seo.image
+        }
+      ]
     }
   }
 }
