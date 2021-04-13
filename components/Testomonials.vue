@@ -60,6 +60,12 @@ export default {
     return {
       testomonials: [
         {
+          name: 'Kees Van Velzen',
+          designation: 'Managing Director - Learnforce',
+          image: require('@/assets/images/clients/kees.jpg'),
+          feedback: 'Ishan is a very communicative and professional developer. Manages expectations incredibly well, keeps his promises and writes faultless and very clean code. Highly recommended for Vue.js projects!'
+        },
+        {
           name: 'Jalal Fathi',
           designation: 'Founder & Chief Podkiter at Podkite',
           image: require('@/assets/images/clients/jay.jpeg'),
