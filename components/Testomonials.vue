@@ -61,7 +61,7 @@ export default {
       testomonials: [
         {
           name: 'Kees Van Velzen',
-          designation: 'Managing Director - Learnforce',
+          designation: 'Managing Director at Learnforce',
           image: require('@/assets/images/clients/kees.jpg'),
           feedback: 'Ishan is a very communicative and professional developer. Manages expectations incredibly well, keeps his promises and writes faultless and very clean code. Highly recommended for Vue.js projects!'
         },
