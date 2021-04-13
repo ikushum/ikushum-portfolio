@@ -3,6 +3,7 @@ title: Here's why I decided to drop out of college
 description: We are fed the concept that having a shiny college degree is the only air ticket that can land us a job. The only golden pass that can open doors to opportunities.
 image: 1.jpg
 author: Ishan Subedi
+createdAt: 2020-11-26
 ---
 
 We are fed the concept that having a shiny college degree is the only air ticket that can land us a job. The only golden pass that can open doors to opportunities. 

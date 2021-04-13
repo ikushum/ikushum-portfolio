@@ -3,6 +3,7 @@ title: Making Vue/Nuxt apps Search Engine friendly without SSR
 description: Sometimes, deploying a frontend app with a separate server just for the sake of SEO reasons is a huge overkill.
 image: 1.jpeg
 author: Ishan Subedi
+createdAt: 2020-10-12
 ---
 
 Vue applications, by default, are not Search Engine optimized. The content of the pages are generated during the runtime. That means when the web crawlers come across the website (no matter which page), all they will discover is a plain and dumb `index.html` with no meaning full content. The `index.html` looks something like this:
