@@ -29,7 +29,7 @@
           </h4>
         </div> -->
 
-        <p class="my-5 grey--text headline">
+        <p class="my-5 grey--text text--darken-2 headline">
           I help businesses build <strong>  extraordinary web solutions </strong> and succeed together.
           A Kathmandu based <strong> Frontend Engineer </strong> helping clients bring
           their ideas into reality.

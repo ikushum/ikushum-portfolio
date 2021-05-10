@@ -40,7 +40,7 @@
                   </v-list-item-content>
                 </v-list-item>
 
-                <div class="headline py-10 grey--text text-center">
+                <div class="headline py-10 grey--text text--darken-2 text-center">
                   "
                   {{ testomonial.feedback }}
                   "

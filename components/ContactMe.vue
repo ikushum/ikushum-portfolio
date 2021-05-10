@@ -40,7 +40,7 @@
               />
 
               <div
-                :class="(hover ? contact.color : 'grey') + '--text'"
+                :class="(hover ? contact.color : 'grey') + '--text text--darken-2 '"
                 class="my-2 caption"
               >
                 {{ contact.title }}
