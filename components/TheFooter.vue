@@ -9,7 +9,7 @@
           <v-img
             :class="{'mx-auto': !$vuetify.breakpoint.mdAndUp}"
             contain
-            max-width="100"
+            max-width="120"
             src="/logo.svg"
             class="cursor-pointer"
             @click="$router.push('/')"

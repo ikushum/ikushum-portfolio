@@ -1,6 +1,6 @@
 <template>
   <v-container style="width:100%" class="d-flex align-center">
-    <v-img contain max-width="100" src="/logo.svg" class="cursor-pointer" @click="$router.push('/')" />
+    <v-img contain max-width="120" src="/logo.svg" class="cursor-pointer" @click="$router.push('/')" />
 
     <v-spacer />
 
