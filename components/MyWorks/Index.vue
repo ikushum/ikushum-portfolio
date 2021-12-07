@@ -52,7 +52,7 @@ export default {
       works: [
         {
           title: 'Racepass',
-          description: 'Marketplace for sporting events.',
+          description: 'Online marketplace for sporting events.',
           image: '/works/racepass.png',
           link: 'https://racepass.com/'
         },
