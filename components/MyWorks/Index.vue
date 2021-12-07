@@ -51,6 +51,18 @@ export default {
     return {
       works: [
         {
+          title: 'Racepass',
+          description: 'Marketplace for sporting events.',
+          image: '/works/racepass.png',
+          link: 'https://racepass.com/'
+        },
+        {
+          title: 'Elastic Pod',
+          description: 'Powerful In-audio Search For Podcasts',
+          image: '/works/elasticpod.png',
+          link: 'https://www.elasticpod.com/'
+        },
+        {
           title: 'Merojob',
           description: 'Nepal\'s Number One Job Portal',
           image: '/works/merojob.png',
@@ -61,19 +73,6 @@ export default {
           description: 'Chart Analytics and Marketing Attribution for Podcasters',
           image: '/works/podkite.png',
           link: 'https://podkite.com/'
-        },
-        {
-          title: 'Elastic Pod',
-          description: 'Powerful In-audio Search For Podcasts',
-          image: '/works/elasticpod.png',
-          link: 'https://www.elasticpod.com/'
-        },
-        {
-          title: 'RealHRsoft',
-          description: 'Complete HR Intelligence Technology',
-          image: '/works/realhrsoft.png',
-          link: 'https://realhrsoft.com/'
-
         }
       ]
     }
