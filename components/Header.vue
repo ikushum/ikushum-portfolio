@@ -8,7 +8,7 @@
   >
     <v-container>
       <h1 class="display-2 font-weight-bold">
-        Namaste, I’m Ishan Subedi
+        I'm Ishan Subedi
       </h1>
 
       <div class="my-7">
