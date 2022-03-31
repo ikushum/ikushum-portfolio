@@ -4,7 +4,7 @@
       <v-col class="d-none d-sm-block" sm="6" cols="12">
         <v-img
           contain
-          src="/ishan.png"
+          src="/ishan.jpg"
           lazy-src="/ishan-lazy.jpg"
           gradient="to left top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)"
         />
