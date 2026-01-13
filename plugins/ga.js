@@ -1,45 +1,31 @@
-/* eslint-disable */
-
 export default ({ app }) => {
-  /*
-   ** Only run on client-side and only in production mode
-   */
-  if (process.env.NODE_ENV !== 'production')
-    return 
-    /*
-     ** Include Google Analytics Script
-     */
-  ;(function (i, s, o, g, r, a, m) {
-    i['GoogleAnalyticsObject'] = r
-    ;(i[r] =
-      i[r] ||
-      function () {
-        ;(i[r].q = i[r].q || []).push(arguments)
-      }),
-      (i[r].l = 1 * new Date())
-    ;(a = s.createElement(o)), (m = s.getElementsByTagName(o)[0])
-    a.async = 1
-    a.src = g
-    m.parentNode.insertBefore(a, m)
-  })(
-    window,
-    document,
-    'script',
-    'https://www.google-analytics.com/analytics.js',
-    'ga'
-  )
-  /*
-   ** Set the current page
-   */
-  ga('create', process.env.GOOGLE_ANALYTICS_TRACKING_ID, 'auto')
-  /*
-   ** Every time the route changes (fired on initialization too)
-   */
-  app.router.afterEach((to, from) => {
-    /*
-     ** We tell Google Analytics to add a `pageview`
-     */
-    ga('set', 'page', to.fullPath)
-    ga('send', 'pageview')
+  const isProduction = process.env.NODE_ENV === 'production'
+  const forceEnabled = process.env.ENABLE_ANALYTICS === 'true'
+
+  // Skip if not production and not explicitly enabled
+  if (!isProduction && !forceEnabled) { return }
+
+  const measurementId = process.env.GOOGLE_ANALYTICS_MEASUREMENT_ID
+  if (!measurementId) { return }
+
+  // Load gtag.js script
+  const script = document.createElement('script')
+  script.async = true
+  script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`
+  document.head.appendChild(script)
+
+  // Initialize gtag
+  window.dataLayer = window.dataLayer || []
+  function gtag () { window.dataLayer.push(arguments) }
+  window.gtag = gtag
+  gtag('js', new Date())
+  gtag('config', measurementId, { send_page_view: false })
+
+  // Track route changes for SPA
+  app.router.afterEach((to) => {
+    gtag('event', 'page_view', {
+      page_path: to.fullPath,
+      page_title: document.title
+    })
   })
 }

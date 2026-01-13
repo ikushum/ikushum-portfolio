@@ -1,6 +1,7 @@
 export default {
   env: {
-    GOOGLE_ANALYTICS_TRACKING_ID: process.env.GOOGLE_ANALYTICS_TRACKING_ID
+    GOOGLE_ANALYTICS_MEASUREMENT_ID: process.env.GOOGLE_ANALYTICS_MEASUREMENT_ID,
+    ENABLE_ANALYTICS: process.env.ENABLE_ANALYTICS
   },
 
   // Target (https://go.nuxtjs.dev/config-target)
