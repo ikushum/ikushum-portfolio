@@ -1,30 +1,30 @@
 <template>
-  <section id="home" class="hero">
+  <section id="home" ref="root" class="hero">
     <div class="hero__bg" aria-hidden="true">
       <div class="hero__grid" />
-      <div class="hero__glow" />
+      <div ref="glow" class="hero__glow" />
     </div>
 
     <div class="wrap wrap-wide hero__inner">
       <div class="hero__copy">
-        <span class="hero__badge anim" style="--d: 0.05s">
+        <span ref="badge" class="hero__badge hero-anim">
           <span class="hero__badge-dot" aria-hidden="true" />
           Available for new projects
           <span class="hero__badge-sep" aria-hidden="true" />
           <span class="mono">Kathmandu · GMT+5:45</span>
         </span>
 
-        <h1 class="hero__title anim" style="--d: 0.12s">
+        <h1 ref="title" class="hero__title hero-anim">
           From idea to <span class="hero__accent">shipped product</span> — built by one engineer.
         </h1>
 
-        <p class="hero__lead anim" style="--d: 0.2s">
+        <p ref="lead" class="hero__lead hero-anim">
           I'm Ishan, a product engineer. Founders bring me a rough idea; I hand back
           a live, revenue-ready product — design, full-stack build, AI, and
           deployment. The whole thing, one person, done right.
         </p>
 
-        <div class="hero__cta anim" style="--d: 0.28s">
+        <div ref="cta" class="hero__cta hero-anim">
           <a href="#contact" class="btn btn--accent btn--lg" @click.prevent="go('#contact')">
             Book a call
             <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg>
@@ -34,7 +34,7 @@
           </a>
         </div>
 
-        <div class="hero__trust anim" style="--d: 0.36s">
+        <div ref="trust" class="hero__trust hero-anim">
           <span class="hero__trust-item">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="hero__star"><path d="m12 2 2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 7.1-1.01L12 2z" /></svg>
             Product Engineer
@@ -47,8 +47,8 @@
       </div>
 
       <div
-        class="hero__visual anim"
-        style="--d: 0.32s"
+        ref="visual"
+        class="hero__visual hero-anim"
         @mouseenter="pause"
         @mouseleave="resume"
       >
@@ -122,18 +122,22 @@ export default {
     }
   },
   mounted () {
-    const reduce =
-      window.matchMedia &&
-      window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    if (!reduce) { this.resume() }
+    const m = this.$motion
+    if (m && !m.reduce) {
+      this.resume()
+      this.$nextTick(() => this.playIntro())
+    }
   },
   beforeDestroy () {
     this.pause()
+    if (this.ctx) { this.ctx.revert() }
   },
   methods: {
     go (hash) {
-      const el = document.querySelector(hash)
-      if (el) { el.scrollIntoView({ behavior: 'smooth', block: 'start' }) }
+      if (this.$motion) { this.$motion.scrollToHash(hash) } else {
+        const el = document.querySelector(hash)
+        if (el) { el.scrollIntoView({ behavior: 'smooth', block: 'start' }) }
+      }
     },
     setProduct (i) {
       this.current = i
@@ -147,6 +151,32 @@ export default {
     },
     pause () {
       if (this.timer) { clearInterval(this.timer); this.timer = null }
+    },
+    playIntro () {
+      const m = this.$motion
+      if (!m || m.reduce) { return }
+      const { gsap } = m
+      const r = this.$refs
+
+      this.ctx = gsap.context(() => {
+        gsap.set(r.glow, { opacity: 0, scale: 0.7, transformOrigin: 'top right' })
+        gsap.set(r.badge, { opacity: 0, y: 14 })
+        gsap.set(r.title, { opacity: 0, y: 26, clipPath: 'inset(0 0 100% 0)' })
+        gsap.set([r.lead, r.cta, r.trust], { opacity: 0, y: 18 })
+        gsap.set(r.visual, { opacity: 0, y: 34, scale: 0.965, transformOrigin: 'center bottom' })
+
+        const tl = gsap.timeline({ defaults: { ease: 'expo.out' } })
+        tl.to(r.glow, { opacity: 0.6, scale: 1, duration: 1.4 }, 0)
+          .to(r.badge, { opacity: 1, y: 0, duration: 0.8 }, 0.1)
+          .to(r.title, { opacity: 1, y: 0, clipPath: 'inset(0 0 0% 0)', duration: 1.15 }, 0.22)
+          .to(r.visual, { opacity: 1, y: 0, scale: 1, duration: 1.2 }, 0.4)
+          .to(r.lead, { opacity: 1, y: 0, duration: 0.85 }, 0.62)
+          .to(r.cta, { opacity: 1, y: 0, duration: 0.85 }, 0.74)
+          .to(r.trust, { opacity: 1, y: 0, duration: 0.85 }, 0.84)
+          .add(() => {
+            gsap.set([r.badge, r.title, r.lead, r.cta, r.trust, r.visual], { clearProps: 'clip-path' })
+          })
+      }, this.$refs.root)
     }
   }
 }
@@ -163,6 +193,11 @@ export default {
   overflow: hidden;
   isolation: isolate;
 }
+
+/* Progressive-enhancement entrance: visible by default (no-JS / reduced motion),
+   hidden only when JS is on so the GSAP intro has something to reveal. */
+.js .hero-anim { opacity: 0; }
+
 .hero__bg { position: absolute; inset: 0; z-index: -1; }
 .hero__grid {
   position: absolute;
@@ -356,12 +391,8 @@ export default {
   .hero__visual { display: none; }
 }
 
-/* Entrance */
-.anim { opacity: 0; transform: translateY(16px); animation: heroUp 0.85s var(--ease-out) forwards; animation-delay: var(--d, 0s); }
-@keyframes heroUp { to { opacity: 1; transform: none; } }
-
 @media (prefers-reduced-motion: reduce) {
-  .anim { opacity: 1; transform: none; animation: none; }
+  .js .hero-anim { opacity: 1; }
   .hero__shot img { transition: opacity 0.2s linear; transform: none; }
   .hero__shot img.is-active { transform: none; }
   .hero__window, .hero__dot { transition: none; }

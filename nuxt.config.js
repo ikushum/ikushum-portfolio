@@ -90,7 +90,8 @@ export default {
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
     { src: '~plugins/ga.js', mode: 'client' },
-    { src: '~plugins/reveal.client.js', mode: 'client' }
+    { src: '~plugins/reveal.client.js', mode: 'client' },
+    { src: '~plugins/motion.client.js', mode: 'client' }
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -150,6 +151,8 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
+    // Lenis ships untranspiled ESM (class fields); run it through babel.
+    transpile: ['lenis'],
     // The bundled postcss-preset-env custom-properties polyfill can't parse
     // modern color syntax (oklch(), color-mix()). Disable it — every target
     // browser resolves CSS custom properties natively.

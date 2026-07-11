@@ -103,7 +103,11 @@ export default {
     goHome () {
       this.menuOpen = false
       if (this.$route.path === '/') {
-        window.scrollTo({ top: 0, behavior: 'smooth' })
+        if (this.$motion && this.$motion.lenis) {
+          this.$motion.lenis.scrollTo(0, { duration: 1.1 })
+        } else {
+          window.scrollTo({ top: 0, behavior: 'smooth' })
+        }
       } else {
         this.$router.push('/')
       }
@@ -119,6 +123,10 @@ export default {
       this.scrollToSection(item.hash)
     },
     scrollToSection (hash) {
+      if (this.$motion) {
+        this.$motion.scrollToHash(hash)
+        return
+      }
       const el = document.querySelector(hash)
       if (el) {
         el.scrollIntoView({ behavior: 'smooth', block: 'start' })

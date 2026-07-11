@@ -101,13 +101,6 @@
             <dd class="oss__stat-label">{{ s.label }}</dd>
           </div>
         </dl>
-
-        <div v-reveal="{ delay: '0.15s' }" class="oss__components">
-          <p class="oss__components-label mono">Vuetify components I've shipped fixes &amp; features to</p>
-          <div class="oss__tags">
-            <span v-for="c in components" :key="c" class="oss__tag mono">{{ c }}</span>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -122,11 +115,6 @@ export default {
         { num: '40+', label: 'Merged PRs to Vuetify' },
         { num: '8+', label: 'Open-source projects' },
         { num: '2016', label: 'Contributing since' }
-      ],
-      components: [
-        'VDateInput', 'VSelect', 'VDatePicker', 'VMaskInput',
-        'VAutocomplete', 'VCombobox', 'VColorPicker', 'VTimePicker',
-        'VField', 'VWindow', 'VOtpInput', 'VTextField'
       ]
     }
   }
@@ -190,9 +178,8 @@ export default {
   grid-template-columns: repeat(3, 1fr);
   gap: clamp(1rem, 3vw, 2rem);
   margin: clamp(2.5rem, 5vw, 3.5rem) 0 0;
-  padding: clamp(1.75rem, 4vw, 2.5rem) 0;
+  padding-top: clamp(1.75rem, 4vw, 2.5rem);
   border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
 }
 .oss__stat { margin: 0; }
 .oss__stat-num {
@@ -208,23 +195,6 @@ export default {
   font-size: var(--text-sm);
   color: var(--ink-muted);
   max-width: 20ch;
-}
-
-.oss__components { margin-top: clamp(2rem, 4vw, 2.75rem); }
-.oss__components-label {
-  font-size: 0.7rem;
-  color: var(--ink-faint);
-  letter-spacing: 0.03em;
-  margin: 0 0 1rem;
-}
-.oss__tags { display: flex; flex-wrap: wrap; gap: 0.45rem; }
-.oss__tag {
-  font-size: 0.72rem;
-  color: var(--ink-muted);
-  padding: 0.35em 0.75em;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-pill);
-  background: var(--bg);
 }
 
 @media (max-width: 900px) {
