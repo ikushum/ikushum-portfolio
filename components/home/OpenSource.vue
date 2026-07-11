@@ -9,7 +9,7 @@
               Open source
             </p>
             <h2 v-reveal="{ delay: '0.05s' }" class="oss__title">
-              I don't just build on <span class="oss__accent">open source</span> — I help build it.
+              I don't just build on <span class="oss__accent">open source</span> — I&nbsp; help build it.
             </h2>
             <p v-reveal="{ delay: '0.1s' }" class="lead oss__lead">
               I'm a regular open-source contributor across the Vue ecosystem and
