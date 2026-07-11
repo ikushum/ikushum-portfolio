@@ -148,6 +148,17 @@ body {
 .v-application code,
 .v-application .code { font-family: var(--font-mono) !important; }
 .v-application a { color: inherit; }
+/* Vuetify's theme service injects `.v-application a { color: <primary> }` into
+   <head> at runtime. In production it loads AFTER this file and, sharing the
+   same (0,1,1) specificity as the reset above, wins on source order — tinting
+   every global-class anchor (buttons, text links) with the orange primary.
+   Scoped component anchors sit at (0,2,0)+ and already outrank it; these global
+   classes don't, so re-assert their intended colors at a higher specificity. */
+.v-application a.btn { color: var(--btn-fg); }
+.v-application a.brand { color: var(--ink); }
+.v-application a.link { color: var(--ink); }
+.v-application a.link:hover { color: var(--accent-text); }
+.v-application .prose a { color: var(--accent-text); }
 .theme--light.v-application,
 .theme--dark.v-application { background: var(--bg) !important; color: var(--ink) !important; }
 
