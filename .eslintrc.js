@@ -14,5 +14,12 @@ module.exports = {
   plugins: [
   ],
   // add your custom rules here
-  rules: {}
+  rules: {
+    // Inline SVG markup keeps multiple attributes per line by design.
+    'vue/max-attributes-per-line': 'off',
+    'vue/singleline-html-element-content-newline': 'off',
+    'vue/html-self-closing': 'off',
+    // We intentionally guard client-only APIs inside lifecycle hooks.
+    'nuxt/no-env-in-hooks': 'off'
+  }
 }

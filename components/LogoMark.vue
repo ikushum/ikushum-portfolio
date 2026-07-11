@@ -1,0 +1,25 @@
+<template>
+  <svg
+    class="logomark"
+    viewBox="0 0 36 36"
+    fill="none"
+    role="img"
+    aria-label="Ishan Subedi"
+  >
+    <!-- Hairline frame -->
+    <rect class="logomark__frame" x="2.5" y="2.5" width="31" height="31" rx="8.5" />
+
+    <!-- 'is' monogram — outlined from Clash Display 600 so it renders
+         identically without depending on the webfont being loaded. -->
+    <path
+      class="logomark__glyph"
+      d="M13.11 12.23H9.21V9.16H13.11ZM13.11 26.58H9.21V13.55H13.11ZM20.34 26.84Q17.07 26.84 15.3 25.6Q13.53 24.37 13.53 22.11V22.03H17.43V22.26Q17.43 23.12 18.05 23.43Q18.68 23.75 20.37 23.75Q21.88 23.75 22.41 23.49Q22.94 23.23 22.94 22.63Q22.94 22.08 22.57 21.86Q22.19 21.64 21.02 21.48L17.35 21.04Q13.3 20.6 13.3 17.4Q13.3 15.58 14.91 14.44Q16.52 13.29 19.72 13.29Q22.94 13.29 24.67 14.5Q26.4 15.71 26.4 18.08V18.16H22.5V18Q22.5 17.14 21.9 16.77Q21.3 16.39 19.59 16.39Q18.16 16.39 17.65 16.65Q17.14 16.91 17.14 17.56Q17.14 18.08 17.56 18.32Q17.98 18.57 19.22 18.73L22.01 19.07Q24.58 19.35 25.69 20.25Q26.79 21.15 26.79 22.78Q26.79 24.63 25.06 25.73Q23.33 26.84 20.34 26.84Z"
+    />
+  </svg>
+</template>
+
+<style scoped>
+.logomark { width: 100%; height: 100%; display: block; }
+.logomark__frame { fill: none; stroke: var(--accent); stroke-width: 1.7; }
+.logomark__glyph { fill: var(--accent); }
+</style>

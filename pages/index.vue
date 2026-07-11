@@ -1,106 +1,53 @@
 <template>
   <div>
-    <app-header
-      id="home"
-      style="margin-top:-90px"
-      @click-action="$vuetify.goTo('#about')"
-    />
-
-    <div class="px-sm-10 px-5">
-      <about id="about" />
-      <my-works id="works" />
-      <testomonials id="testomonials" />
-      <!-- <my-expertise id="expertise" /> -->
-      <my-journal />
-      <contact-me id="contact" class="my-12" />
-    </div>
+    <hero />
+    <capabilities />
+    <work />
+    <approach />
+    <about />
+    <proof />
+    <writing />
+    <contact />
   </div>
 </template>
 
 <script>
-import About from '@/components/About'
-import AppHeader from '@/components/Header'
-import MyJournal from '@/components/MyJournal'
-import ContactMe from '@/components/ContactMe'
-import MyWorks from '@/components/MyWorks/Index'
-import Testomonials from '@/components/Testomonials'
-// import MyExpertise from '@/components/MyExpertise'
+import Hero from '@/components/home/Hero'
+import Capabilities from '@/components/home/Capabilities'
+import Work from '@/components/home/Work'
+import Approach from '@/components/home/Approach'
+import About from '@/components/home/About'
+import Proof from '@/components/home/Proof'
+import Writing from '@/components/home/Writing'
+import Contact from '@/components/home/Contact'
 
 const seo = {
-  title: 'Ishan Subedi - Top rated Frontend Engineer',
-  description: 'I help businesses build extraordinary web solutions and succeed together. A Kathmandu based Frontend Engineer helping clients bring their ideas into reality.',
-  image: require('@/assets/images/preview.png'),
-  og: {
-    type: 'website'
-  }
+  title: 'Ishan Subedi — Product Engineer',
+  description:
+    'Ishan Subedi is a product engineer who takes founders from idea to shipped product — design, full-stack build, AI, and deployment. One person, the whole product.'
 }
 
 export default {
   components: {
+    Hero,
+    Capabilities,
+    Work,
+    Approach,
     About,
-    MyWorks,
-    ContactMe,
-    MyJournal,
-    AppHeader,
-    Testomonials
-    // MyExpertise,
+    Proof,
+    Writing,
+    Contact
   },
   head () {
     return {
       title: seo.title,
       titleTemplate: '',
       meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content: seo.description
-        },
-
-        // Open Graph
+        { hid: 'description', name: 'description', content: seo.description },
         { hid: 'og:title', property: 'og:title', content: seo.title },
-        {
-          hid: 'og:description',
-          property: 'og:description',
-          content: seo.description
-        },
-        { hid: 'og:type', property: 'og:type', content: seo.og.type },
-        {
-          hid: 'og:image',
-          property: 'og:image',
-          content: seo.image
-        },
-        {
-          hid: 'og:image:secure_url',
-          property: 'og:image:secure_url',
-          content: seo.image
-        },
-        {
-          hid: 'og:image:alt',
-          property: 'og:image:alt',
-          content: seo.title
-        },
-
-        // Twitter Card
-        {
-          hid: 'twitter:title',
-          name: 'twitter:title',
-          content: seo.title
-        },
-        {
-          hid: 'twitter:description',
-          name: 'twitter:description',
-          content: seo.description
-        },
-        {
-          hid: 'twitter:card',
-          name: 'twitter:card',
-          content: 'summary_large_image'
-        },
-        {
-          hid: 'twitter:image',
-          name: 'twitter:image',
-          content: seo.image
-        }
+        { hid: 'og:description', property: 'og:description', content: seo.description },
+        { hid: 'twitter:title', name: 'twitter:title', content: seo.title },
+        { hid: 'twitter:description', name: 'twitter:description', content: seo.description }
       ]
     }
   }
