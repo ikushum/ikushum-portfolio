@@ -21,22 +21,15 @@
       <div class="about__body">
         <div v-reveal="{ delay: '0.1s' }" class="about__text">
           <p>
-            It started with QBASIC games as a kid and never really stopped. I was
-            the person staying up past midnight because a bug was more interesting
-            than sleep. Eventually I <strong>dropped out of college</strong> to
-            build real products instead of reading about them — a bet on doing over
-            credentialing.
+            Started with QBASIC games as a kid and never stopped. Eventually I
+            <strong>dropped out of college</strong> to build real products — a bet
+            on doing over credentialing.
           </p>
           <p>
-            Since then I've worked with founders and teams across the Switzerland,
-            the US, and beyond as a <strong>Top Rated</strong> freelancer — the kind
-            of collaborator clients describe as communicative, fast, and someone
-            they can simply trust with the whole thing.
-          </p>
-          <p>
-            Today I work as a <strong>product engineer</strong>. I don't just take a
-            ticket and hand back a component — I own the product: the design, the
-            code, the infrastructure, and whether it actually works for real people.
+            Since then I've shipped for founders and teams across Switzerland, the
+            US, and beyond as a <strong>Top Rated</strong> freelancer. Today I work
+            as a <strong>product engineer</strong> who owns the whole thing — design,
+            code, infrastructure, and whether it actually works for real people.
           </p>
         </div>
 
@@ -72,6 +65,7 @@ export default {
   grid-template-areas:
     "media lead"
     "media body";
+  grid-template-rows: min-content 1fr;
   column-gap: clamp(2.5rem, 6vw, 5rem);
   align-items: start;
 }
