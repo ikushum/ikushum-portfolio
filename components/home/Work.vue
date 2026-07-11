@@ -20,6 +20,12 @@
           v-reveal
           class="work__item"
         >
+          <div class="work__intro">
+            <span class="work__idx mono">{{ String(i + 1).padStart(2, '0') }} / {{ String(projects.length).padStart(2, '0') }}</span>
+            <h3 class="work__name">{{ project.title }}</h3>
+            <p class="work__desc muted">{{ project.desc }}</p>
+          </div>
+
           <a
             class="work__media"
             :href="project.link"
@@ -31,11 +37,7 @@
             <span class="work__visit">Visit <span aria-hidden="true">↗</span></span>
           </a>
 
-          <div class="work__body">
-            <span class="work__idx mono">{{ String(i + 1).padStart(2, '0') }} / {{ String(projects.length).padStart(2, '0') }}</span>
-            <h3 class="work__name">{{ project.title }}</h3>
-            <p class="work__desc muted">{{ project.desc }}</p>
-
+          <div class="work__details">
             <dl class="work__meta">
               <div>
                 <dt class="mono">Role</dt>
@@ -126,10 +128,22 @@ export default {
 .work__item {
   display: grid;
   grid-template-columns: 1.15fr 1fr;
+  grid-template-areas:
+    "media intro"
+    "media details";
   align-items: center;
-  gap: clamp(2rem, 5vw, 4.5rem);
+  column-gap: clamp(2rem, 5vw, 4.5rem);
 }
-.work__item:nth-child(even) .work__media { order: 2; }
+.work__intro { grid-area: intro; }
+.work__media { grid-area: media; }
+.work__details { grid-area: details; }
+
+.work__item:nth-child(even) {
+  grid-template-columns: 1fr 1.15fr;
+  grid-template-areas:
+    "intro media"
+    "details media";
+}
 
 .work__media {
   position: relative;
@@ -192,7 +206,15 @@ export default {
 .work__link { font-size: var(--text-sm); font-family: var(--font-mono); }
 
 @media (max-width: 820px) {
-  .work__item { grid-template-columns: 1fr; gap: 1.75rem; }
-  .work__item:nth-child(even) .work__media { order: 0; }
+  /* Name + description, then the screenshot it refers to, then the details */
+  .work__item,
+  .work__item:nth-child(even) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "intro"
+      "media"
+      "details";
+    gap: 1.5rem;
+  }
 }
 </style>

@@ -1,6 +1,13 @@
 <template>
   <section id="about" class="about section">
     <div class="wrap wrap-wide about__inner">
+      <div class="about__lead">
+        <p v-reveal class="eyebrow">About</p>
+        <h2 v-reveal="{ delay: '0.05s' }" class="about__title">
+          Hi, I'm Ishan. I've been shipping software since I was a teenager.
+        </h2>
+      </div>
+
       <div v-reveal class="about__media">
         <div class="about__photo">
           <img src="/ishan.jpg" alt="Ishan Subedi, product engineer, at work">
@@ -12,11 +19,6 @@
       </div>
 
       <div class="about__body">
-        <p v-reveal class="eyebrow">About</p>
-        <h2 v-reveal="{ delay: '0.05s' }" class="about__title">
-          Hi, I'm Ishan. I've been shipping software since I was a teenager.
-        </h2>
-
         <div v-reveal="{ delay: '0.1s' }" class="about__text">
           <p>
             It started with QBASIC games as a kid and never really stopped. I was
@@ -67,10 +69,15 @@ export default {
 .about__inner {
   display: grid;
   grid-template-columns: 0.85fr 1.15fr;
-  gap: clamp(2.5rem, 6vw, 5rem);
+  grid-template-areas:
+    "media lead"
+    "media body";
+  column-gap: clamp(2.5rem, 6vw, 5rem);
   align-items: start;
 }
-.about__media { position: sticky; top: 6rem; }
+.about__lead { grid-area: lead; }
+.about__media { grid-area: media; position: sticky; top: 6rem; }
+.about__body { grid-area: body; }
 .about__photo {
   position: relative;
   border-radius: var(--radius-lg);
@@ -128,7 +135,15 @@ export default {
 .about__values-v { color: var(--ink-muted); font-size: var(--text-sm); }
 
 @media (max-width: 860px) {
-  .about__inner { grid-template-columns: 1fr; }
+  /* Intro heading, then the photo, then the story */
+  .about__inner {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "lead"
+      "media"
+      "body";
+    gap: 1.5rem;
+  }
   .about__media { position: static; max-width: 22rem; }
   .about__values li { flex-direction: column; gap: 0.2rem; }
   .about__values-k { min-width: 0; }
