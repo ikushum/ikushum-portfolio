@@ -8,7 +8,7 @@
             <span class="cap__kicker-bar" aria-hidden="true" />
             The offer
           </p>
-          <h2 class="cap__title">
+          <h2 v-reveal class="cap__title">
             You don't need to hire a team of five. You need
             <span class="cap__title-accent">one engineer who owns the outcome.</span>
           </h2>
