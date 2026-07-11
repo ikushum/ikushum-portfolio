@@ -2,6 +2,7 @@
   <div>
     <hero />
     <capabilities />
+    <open-source />
     <work />
     <approach />
     <about />
@@ -15,6 +16,7 @@
 import Hero from '@/components/home/Hero'
 import Capabilities from '@/components/home/Capabilities'
 import Work from '@/components/home/Work'
+import OpenSource from '@/components/home/OpenSource'
 import Approach from '@/components/home/Approach'
 import About from '@/components/home/About'
 import Proof from '@/components/home/Proof'
@@ -32,6 +34,7 @@ export default {
     Hero,
     Capabilities,
     Work,
+    OpenSource,
     Approach,
     About,
     Proof,
