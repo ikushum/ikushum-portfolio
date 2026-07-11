@@ -1,5 +1,5 @@
 <template>
-  <section id="approach" class="approach section">
+  <section id="approach" ref="root" class="approach section">
     <div class="wrap wrap-wide">
       <div class="approach__head">
         <p v-reveal class="eyebrow">How it works</p>
@@ -12,7 +12,17 @@
         </p>
       </div>
 
-      <ol class="approach__steps">
+      <ol ref="steps" class="approach__steps">
+        <span
+          class="approach__fill"
+          aria-hidden="true"
+          :style="{ transform: `scaleX(${railFill})` }"
+        />
+        <span
+          class="approach__lead"
+          aria-hidden="true"
+          :style="{ left: `${railFill * 100}%`, opacity: railFill > 0 && railFill < 1 ? 1 : 0 }"
+        />
         <li
           v-for="(step, i) in steps"
           :key="step.title"
@@ -43,6 +53,7 @@
 export default {
   data () {
     return {
+      railFill: 0,
       steps: [
         {
           title: 'Discover',
@@ -61,6 +72,37 @@ export default {
           desc: 'Measure against real usage, then improve on a weekly cadence. Launch is the starting line.'
         }
       ]
+    }
+  },
+  mounted () {
+    this.$nextTick(() => this.setupMotion())
+  },
+  beforeDestroy () {
+    if (this.ctx) { this.ctx.revert() }
+  },
+  methods: {
+    setupMotion () {
+      const m = this.$motion
+      // Reduced motion / no-JS: show the connector fully drawn, no scrub.
+      if (!m || m.reduce) { this.railFill = 1; return }
+      const { gsap } = m
+      const track = this.$refs.steps
+      if (!track) { return }
+
+      this.ctx = gsap.context(() => {
+        const state = { v: 0 }
+        gsap.to(state, {
+          v: 1,
+          duration: 2.2,
+          ease: 'power2.inOut',
+          scrollTrigger: {
+            trigger: track,
+            start: 'top 75%',
+            once: true
+          },
+          onUpdate: () => { this.railFill = state.v }
+        })
+      }, this.$refs.root)
     }
   }
 }
@@ -92,6 +134,33 @@ export default {
   right: 0;
   height: 1px;
   background: var(--border);
+}
+/* Accent that sweeps left→right (Discover → Iterate) as the section scrolls in */
+.approach__fill {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--accent);
+  transform-origin: left center;
+  transform: scaleX(0);
+  will-change: transform;
+}
+/* Glow that rides the leading edge of the sweep */
+.approach__lead {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 9px;
+  height: 9px;
+  margin-top: -4px;
+  margin-left: -4px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-soft), 0 0 14px 2px var(--accent);
+  transition: opacity 0.3s ease;
+  will-change: left;
 }
 .approach__step { position: relative; padding-top: 2.2rem; }
 .approach__dot {
@@ -141,7 +210,9 @@ export default {
 }
 @media (max-width: 560px) {
   .approach__steps { grid-template-columns: 1fr; }
-  .approach__steps::before { display: none; }
+  .approach__steps::before,
+  .approach__fill,
+  .approach__lead { display: none; }
   .approach__ai { grid-template-columns: 1fr; gap: 1rem; }
   .approach__ai-mark { justify-self: start; }
 }

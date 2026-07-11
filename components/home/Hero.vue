@@ -15,13 +15,13 @@
         </span>
 
         <h1 ref="title" class="hero__title hero-anim">
-          From idea to <span class="hero__accent">shipped product</span> — built by one engineer.
+          From idea to <span class="hero__accent">shipped product</span>
         </h1>
 
         <p ref="lead" class="hero__lead hero-anim">
-          I'm Ishan, a product engineer. Founders bring me a rough idea; I hand back
-          a live, revenue-ready product — design, full-stack build, AI, and
-          deployment. The whole thing, one person, done right.
+          Founders bring me a <b>rough idea</b>; I hand back
+          a live, <b>revenue-ready</b> product — Design, Development, AI, and
+          Deployment. The whole thing, one person, done right.
         </p>
 
         <div ref="cta" class="hero__cta hero-anim">
