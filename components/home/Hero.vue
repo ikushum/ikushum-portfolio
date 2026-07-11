@@ -159,7 +159,7 @@ export default {
   display: flex;
   align-items: center;
   padding-top: clamp(7rem, 6rem + 4vw, 9rem);
-  padding-bottom: clamp(3.5rem, 6vw, 6rem);
+  padding-bottom: clamp(1.5rem, 6vw, 1.5rem);
   overflow: hidden;
   isolation: isolate;
 }
