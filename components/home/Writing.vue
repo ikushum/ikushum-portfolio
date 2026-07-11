@@ -37,9 +37,6 @@
 
 <script>
 export default {
-  data () {
-    return { posts: [] }
-  },
   async fetch () {
     this.posts = await this.$content('journals')
       .where({ isHidden: { $ne: true } })
@@ -47,6 +44,9 @@ export default {
       .sortBy('createdAt', 'desc')
       .limit(3)
       .fetch()
+  },
+  data () {
+    return { posts: [] }
   },
   methods: {
     formatDate (date) {

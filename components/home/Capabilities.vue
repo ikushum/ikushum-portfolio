@@ -77,11 +77,6 @@ export default {
           tags: ['Postgres', 'Firebase', 'REST / GraphQL', 'Stripe']
         },
         {
-          title: 'AI features that ship',
-          desc: 'LLM-powered features that actually work in production — search, assistants, automation — not demos that fall over on real data.',
-          tags: ['Claude', 'OpenAI', 'RAG', 'Embeddings']
-        },
-        {
           title: 'Infra & deployment',
           desc: 'Get it live, keep it fast, keep it up. Pipelines, environments, and monitoring so shipping is boring and safe.',
           tags: ['Vercel', 'AWS', 'CI / CD', 'Monitoring']

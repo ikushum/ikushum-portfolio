@@ -26,7 +26,7 @@ import Contact from '@/components/home/Contact'
 const seo = {
   title: 'Ishan Subedi — Product Engineer',
   description:
-    'Ishan Subedi is a product engineer who takes founders from idea to shipped product — design, full-stack build, AI, and deployment. One person, the whole product.'
+    'Ishan Subedi is a product engineer who takes founders from idea to shipped product — design, full-stack build, deployment. One person, the whole product.'
 }
 
 export default {

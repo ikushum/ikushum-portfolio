@@ -20,7 +20,7 @@
 
         <p ref="lead" class="hero__lead hero-anim">
           Founders bring me a <b>rough idea</b>; I hand back
-          a live, <b>revenue-ready</b> product — Design, Development, AI, and
+          a live, <b>revenue-ready</b> product — Design, Development and
           Deployment. The whole thing, one person, done right.
         </p>
 

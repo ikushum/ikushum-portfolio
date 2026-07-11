@@ -29,7 +29,7 @@ export default {
         hid: 'description',
         name: 'description',
         content:
-          'Ishan Subedi is a product engineer who takes founders from idea to shipped product — design, full-stack build, AI, and deployment. One person, the whole product.'
+          'Ishan Subedi is a product engineer who takes founders from idea to shipped product — design, full-stack build, deployment. One person, the whole product.'
       },
 
       // Open Graph defaults (pages override title/description/url)
