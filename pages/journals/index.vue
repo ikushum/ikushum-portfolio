@@ -65,6 +65,7 @@ export default {
         { hid: 'description', name: 'description', content: seo.description },
         { hid: 'og:title', property: 'og:title', content: seo.title },
         { hid: 'og:description', property: 'og:description', content: seo.description },
+        { hid: 'og:url', property: 'og:url', content: process.env.SITE_URL + '/journals' },
         { hid: 'twitter:title', name: 'twitter:title', content: seo.title },
         { hid: 'twitter:description', name: 'twitter:description', content: seo.description }
       ]

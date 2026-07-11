@@ -35,14 +35,17 @@ export default {
       // Open Graph defaults (pages override title/description/url)
       { hid: 'og:site_name', property: 'og:site_name', content: 'Ishan Subedi' },
       { hid: 'og:type', property: 'og:type', content: 'website' },
+      { hid: 'og:locale', property: 'og:locale', content: 'en_US' },
       { hid: 'og:url', property: 'og:url', content: SITE_URL },
       { hid: 'og:image', property: 'og:image', content: OG_IMAGE },
+      { hid: 'og:image:type', property: 'og:image:type', content: 'image/png' },
       { hid: 'og:image:width', property: 'og:image:width', content: '1200' },
       { hid: 'og:image:height', property: 'og:image:height', content: '630' },
       { hid: 'og:image:alt', property: 'og:image:alt', content: 'Ishan Subedi — Product Engineer' },
 
       // Twitter
       { hid: 'twitter:card', name: 'twitter:card', content: 'summary_large_image' },
+      { hid: 'twitter:site', name: 'twitter:site', content: '@ikushum' },
       { hid: 'twitter:image', name: 'twitter:image', content: OG_IMAGE },
       { hid: 'twitter:creator', name: 'twitter:creator', content: '@ikushum' }
     ],
