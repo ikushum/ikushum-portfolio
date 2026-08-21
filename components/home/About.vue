@@ -4,7 +4,7 @@
       <div class="about__lead">
         <p v-reveal class="eyebrow">About</p>
         <h2 v-reveal="{ delay: '0.05s' }" class="about__title">
-          I'm John. I've been shipping software since before it was a job.
+          Hi, I'm John. I build the whole product — not just my slice of it.
         </h2>
       </div>
 
@@ -21,21 +21,20 @@
       <div class="about__body">
         <div v-reveal="{ delay: '0.1s' }" class="about__text">
           <p>
-            It started with QBASIC games on a hand-me-down PC, and it never really
-            stopped. I'm still the person up past midnight because
-            <strong>a good bug is more interesting than sleep.</strong>
+            It started with QBASIC games as a kid and never really stopped. I was
+            the one still awake at 2am because <strong>a bug was more interesting
+              than sleep</strong> — that part hasn't changed, it just pays better now.
           </p>
           <p>
-            Since then I've built products for founders and teams across Switzerland,
-            the US, and beyond as a <strong>Top Rated</strong> freelancer. I work as a
-            <strong>product engineer</strong>, which means I take the whole thing —
-            design, code, infrastructure, and the hard question of whether it actually
-            works for the people using it.
+            Since then I've shipped for founders and teams across Switzerland, the
+            US, and beyond as a <strong>Top Rated</strong> freelancer. I work as a
+            <strong>product engineer</strong>, which means I take an idea and carry it
+            all the way — design, code, infrastructure, and the unglamorous work of
+            making sure it holds up once real people are using it.
           </p>
           <p>
-            Most of my work starts with a rough idea and a deadline. I'm comfortable
-            there. I'd rather put something real in front of users this week than
-            plan the perfect version of it for a month.
+            You get one person who can go from a rough sketch to something live,
+            without the handoffs where good ideas usually go missing.
           </p>
         </div>
 
