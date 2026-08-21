@@ -4,13 +4,13 @@
       <div class="about__lead">
         <p v-reveal class="eyebrow">About</p>
         <h2 v-reveal="{ delay: '0.05s' }" class="about__title">
-          Hi, I'm Ishan. I've been shipping software since I was a teenager.
+          I'm John. I've been shipping software since before it was a job.
         </h2>
       </div>
 
       <div v-reveal class="about__media">
         <div class="about__photo">
-          <img src="/ishan.jpg" alt="Ishan Subedi, product engineer, at work">
+          <img src="/ishan.jpg" alt="John, product engineer, at work">
         </div>
         <div class="about__badge">
           <span class="about__badge-dot" aria-hidden="true" />
@@ -21,15 +21,21 @@
       <div class="about__body">
         <div v-reveal="{ delay: '0.1s' }" class="about__text">
           <p>
-            Started with QBASIC games as a kid and never stopped. Eventually I was
-            the person staying up past midnight because<strong> a bug was more interesting
-              than sleep.</strong>
+            It started with QBASIC games on a hand-me-down PC, and it never really
+            stopped. I'm still the person up past midnight because
+            <strong>a good bug is more interesting than sleep.</strong>
           </p>
           <p>
-            Since then I've shipped for founders and teams across Switzerland, the
-            US, and beyond as a <strong>Top Rated</strong> freelancer. Today I work
-            as a <strong>product engineer</strong> who owns the whole life cycle — design,
-            code, infrastructure, and whether it actually works for real people.
+            Since then I've built products for founders and teams across Switzerland,
+            the US, and beyond as a <strong>Top Rated</strong> freelancer. I work as a
+            <strong>product engineer</strong>, which means I take the whole thing —
+            design, code, infrastructure, and the hard question of whether it actually
+            works for the people using it.
+          </p>
+          <p>
+            Most of my work starts with a rough idea and a deadline. I'm comfortable
+            there. I'd rather put something real in front of users this week than
+            plan the perfect version of it for a month.
           </p>
         </div>
 
