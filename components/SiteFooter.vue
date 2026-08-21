@@ -4,7 +4,7 @@
       <div class="footer__brand">
         <a href="/" class="footer__name" @click.prevent="goHome">
           <span class="footer__mark"><logo-mark /></span>
-          Ishan Subedi
+          John
         </a>
         <p class="footer__tag muted">
           Product engineer building and shipping full products for founders — from first sketch to production.
@@ -33,7 +33,7 @@
     </div>
 
     <div class="wrap wrap-wide footer__base">
-      <span class="muted">© {{ year }} Ishan Subedi. Built from Kathmandu.</span>
+      <span class="muted">© {{ year }} John. Built from Kathmandu.</span>
       <span class="footer__status">
         <span class="footer__dot" aria-hidden="true" />
         Available for new projects
