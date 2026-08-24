@@ -4,13 +4,13 @@
       <div class="about__lead">
         <p v-reveal class="eyebrow">About</p>
         <h2 v-reveal="{ delay: '0.05s' }" class="about__title">
-          Hi, I'm Ishan. I've been shipping software since I was a teenager.
+          Hi, I'm John. I've been building software since I was a kid, and I still can't stop.
         </h2>
       </div>
 
       <div v-reveal class="about__media">
         <div class="about__photo">
-          <img src="/ishan.jpg" alt="Ishan Subedi, product engineer, at work">
+          <img src="/ishan.jpg" alt="John, product engineer, at work">
         </div>
         <div class="about__badge">
           <span class="about__badge-dot" aria-hidden="true" />
@@ -21,15 +21,16 @@
       <div class="about__body">
         <div v-reveal="{ delay: '0.1s' }" class="about__text">
           <p>
-            Started with QBASIC games as a kid and never stopped. Eventually I was
-            the person staying up past midnight because<strong> a bug was more interesting
-              than sleep.</strong>
+            It started with QBASIC games on a family computer and never let go. Years
+            later, not much has changed — I'm still the one up past midnight because
+            <strong>a stubborn bug is more interesting than sleep.</strong>
           </p>
           <p>
-            Since then I've shipped for founders and teams across Switzerland, the
-            US, and beyond as a <strong>Top Rated</strong> freelancer. Today I work
-            as a <strong>product engineer</strong> who owns the whole life cycle — design,
-            code, infrastructure, and whether it actually works for real people.
+            That obsession turned into a career shipping for founders and teams across
+            Switzerland, the US, and beyond as a <strong>Top Rated</strong> freelancer.
+            Today I work as a <strong>product engineer</strong> who owns the whole life
+            cycle — design, code, infrastructure — and doesn't stop until it actually
+            works for real people.
           </p>
         </div>
 
