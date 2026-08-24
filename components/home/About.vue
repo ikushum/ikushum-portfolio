@@ -4,13 +4,13 @@
       <div class="about__lead">
         <p v-reveal class="eyebrow">About</p>
         <h2 v-reveal="{ delay: '0.05s' }" class="about__title">
-          Hi, I'm Ishan. I've been shipping software since I was a teenager.
+          Hi, I'm John. I've been shipping software since I was a teenager.
         </h2>
       </div>
 
       <div v-reveal class="about__media">
         <div class="about__photo">
-          <img src="/ishan.jpg" alt="Ishan Subedi, product engineer, at work">
+          <img src="/ishan.jpg" alt="John, product engineer, at work">
         </div>
         <div class="about__badge">
           <span class="about__badge-dot" aria-hidden="true" />
@@ -21,15 +21,15 @@
       <div class="about__body">
         <div v-reveal="{ delay: '0.1s' }" class="about__text">
           <p>
-            Started with QBASIC games as a kid and never stopped. Eventually I was
-            the person staying up past midnight because<strong> a bug was more interesting
-              than sleep.</strong>
+            It started with QBASIC games and never let go. Before long I was the kid
+            up past midnight — not stuck on a bug, but hooked on it, because
+            <strong> a good problem always beat sleep.</strong>
           </p>
           <p>
             Since then I've shipped for founders and teams across Switzerland, the
-            US, and beyond as a <strong>Top Rated</strong> freelancer. Today I work
-            as a <strong>product engineer</strong> who owns the whole life cycle — design,
-            code, infrastructure, and whether it actually works for real people.
+            US, and beyond as a <strong>Top Rated</strong> freelancer. Today I'm a
+            <strong>product engineer</strong> who owns the whole arc — design, code,
+            infrastructure, and whether the thing actually works for real people.
           </p>
         </div>
 
