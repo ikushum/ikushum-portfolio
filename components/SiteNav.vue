@@ -1,9 +1,9 @@
 <template>
   <header class="nav" :class="{ 'is-scrolled': scrolled, 'is-open': menuOpen }">
     <div class="nav__inner wrap wrap-wide">
-      <a href="/" class="brand" aria-label="Ishan Subedi — home" @click.prevent="goHome">
+      <a href="/" class="brand" aria-label="John — home" @click.prevent="goHome">
         <span class="brand__mark"><logo-mark /></span>
-        <span class="brand__name">Ishan Subedi</span>
+        <span class="brand__name">John</span>
         <span class="brand__role">Product Engineer</span>
       </a>
 
