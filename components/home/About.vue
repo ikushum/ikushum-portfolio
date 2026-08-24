@@ -4,13 +4,13 @@
       <div class="about__lead">
         <p v-reveal class="eyebrow">About</p>
         <h2 v-reveal="{ delay: '0.05s' }" class="about__title">
-          Hi, I'm Ishan. I've been shipping software since I was a teenager.
+          Hi, I'm John. I've been shipping software since I was a teenager.
         </h2>
       </div>
 
       <div v-reveal class="about__media">
         <div class="about__photo">
-          <img src="/ishan.jpg" alt="Ishan Subedi, product engineer, at work">
+          <img src="/ishan.jpg" alt="John, product engineer, at work">
         </div>
         <div class="about__badge">
           <span class="about__badge-dot" aria-hidden="true" />
