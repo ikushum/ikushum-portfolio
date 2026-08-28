@@ -15,13 +15,13 @@
         </span>
 
         <h1 ref="title" class="hero__title hero-anim">
-          From idea to <span class="hero__accent">shipped product</span>
+          Your idea, <span class="hero__accent">live and earning</span>
         </h1>
 
         <p ref="lead" class="hero__lead hero-anim">
-          Founders bring me a <b>rough idea</b>; I hand back
-          a live, <b>revenue-ready</b> product — Design, Development and
-          Deployment. The whole thing, one person, done right.
+          Founders hand me a <b>rough idea</b>. I hand back a product real users
+          can pay for — designed, built, and <b>deployed</b>. One person, start
+          to finish, no handoffs.
         </p>
 
         <div ref="cta" class="hero__cta hero-anim">
