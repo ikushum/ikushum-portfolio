@@ -4,7 +4,7 @@
       <div class="about__lead">
         <p v-reveal class="eyebrow">About</p>
         <h2 v-reveal="{ delay: '0.05s' }" class="about__title">
-          Hi, I'm Ishan. I've been shipping software since I was a teenager.
+          Hi, I'm Ishan. I build the whole product, not just my part of it.
         </h2>
       </div>
 
@@ -21,15 +21,19 @@
       <div class="about__body">
         <div v-reveal="{ delay: '0.1s' }" class="about__text">
           <p>
-            Started with QBASIC games as a kid and never stopped. Eventually I was
-            the person staying up past midnight because<strong> a bug was more interesting
-              than sleep.</strong>
+            It started with QBASIC games on a borrowed computer, and it never really
+            stopped. I'm still the person who stays up past midnight because
+            <strong> a good bug is more interesting than sleep.</strong>
           </p>
           <p>
-            Since then I've shipped for founders and teams across Switzerland, the
-            US, and beyond as a <strong>Top Rated</strong> freelancer. Today I work
-            as a <strong>product engineer</strong> who owns the whole life cycle — design,
-            code, infrastructure, and whether it actually works for real people.
+            Since 2016 I've shipped for founders and teams across Switzerland, the
+            US, and beyond as a <strong>Top Rated</strong> freelancer — usually as the
+            only engineer in the room. Design, code, infrastructure, and the
+            unglamorous parts in between.
+          </p>
+          <p>
+            What I care about is the last mile: the product in front of real users,
+            <strong>earning its keep.</strong> Everything before that is just work in progress.
           </p>
         </div>
 
