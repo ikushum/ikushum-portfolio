@@ -4,7 +4,7 @@
       <div class="about__lead">
         <p v-reveal class="eyebrow">About</p>
         <h2 v-reveal="{ delay: '0.05s' }" class="about__title">
-          Hi, I'm Ishan. I build the whole product, not just my part of it.
+          Hi, I'm Ishan. I take products the whole way — idea to something people use.
         </h2>
       </div>
 
@@ -22,18 +22,18 @@
         <div v-reveal="{ delay: '0.1s' }" class="about__text">
           <p>
             It started with QBASIC games on a borrowed computer, and it never really
-            stopped. I'm still the person who stays up past midnight because
-            <strong> a good bug is more interesting than sleep.</strong>
+            stopped. I'm still the one up past midnight because
+            <strong>a good bug is better company than sleep.</strong>
           </p>
           <p>
-            Since 2016 I've shipped for founders and teams across Switzerland, the
-            US, and beyond as a <strong>Top Rated</strong> freelancer — usually as the
-            only engineer in the room. Design, code, infrastructure, and the
-            unglamorous parts in between.
+            Since 2016 I've built for founders and teams in Switzerland, the US and
+            beyond as a <strong>Top Rated</strong> freelancer — usually the only
+            engineer in the room. Design, code, infrastructure, and all the
+            unglamorous bits in between.
           </p>
           <p>
-            What I care about is the last mile: the product in front of real users,
-            <strong>earning its keep.</strong> Everything before that is just work in progress.
+            The part I care about is the last mile: the thing live, in real hands,
+            <strong>earning its keep.</strong> Everything before that is just a draft.
           </p>
         </div>
 
