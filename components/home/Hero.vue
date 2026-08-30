@@ -15,13 +15,13 @@
         </span>
 
         <h1 ref="title" class="hero__title hero-anim">
-          Your idea, <span class="hero__accent">live and earning</span>
+          From rough idea to <span class="hero__accent">product people pay for</span>
         </h1>
 
         <p ref="lead" class="hero__lead hero-anim">
-          Founders hand me a <b>rough idea</b>. I hand back a product real users
-          can pay for — designed, built, and <b>deployed</b>. One person, start
-          to finish, no handoffs.
+          You bring the <b>idea</b>. I design it, build it, and ship it —
+          then stick around to make sure it actually <b>works</b> for the
+          people using it. One person, start to finish, no handoffs.
         </p>
 
         <div ref="cta" class="hero__cta hero-anim">
@@ -109,10 +109,10 @@ export default {
       current: 0,
       timer: null,
       products: [
-        { title: 'Podkite', domain: 'podkite.com', link: 'https://podkite.com/', image: '/works/podkite.png?v=2', alt: 'Podkite analytics dashboard — a product shipped by Ishan' },
-        { title: 'Racepass', domain: 'racepass.com', link: 'https://racepass.com/', image: '/works/racepass.png?v=2', alt: 'Racepass sporting-events marketplace — a product shipped by Ishan' },
-        { title: 'Labster', domain: 'labster.com', link: 'https://labster.com/', image: '/works/labster.png?v=2', alt: 'Labster virtual STEM labs — a product shipped by Ishan' },
-        { title: 'Merojob', domain: 'merojob.com', link: 'https://merojob.com/', image: '/works/merojob.png?v=2', alt: 'Merojob job portal — a product shipped by Ishan' }
+        { title: 'Podkite', domain: 'podkite.com', link: 'https://podkite.com/', image: '/works/podkite.png?v=2', alt: 'Podkite analytics dashboard — a product shipped by John' },
+        { title: 'Racepass', domain: 'racepass.com', link: 'https://racepass.com/', image: '/works/racepass.png?v=2', alt: 'Racepass sporting-events marketplace — a product shipped by John' },
+        { title: 'Labster', domain: 'labster.com', link: 'https://labster.com/', image: '/works/labster.png?v=2', alt: 'Labster virtual STEM labs — a product shipped by John' },
+        { title: 'Merojob', domain: 'merojob.com', link: 'https://merojob.com/', image: '/works/merojob.png?v=2', alt: 'Merojob job portal — a product shipped by John' }
       ]
     }
   },
